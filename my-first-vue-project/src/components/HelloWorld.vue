@@ -1,17 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <input
-      type="text"
-      v-bind:value="state.name"
-      v-on:input="state.name = $event.target.value"
-    />
-    <p>name :{{ state.name }}</p>
-  </div>
+  <div class="hello">hello</div>
+  <p>
+    {{ getSale('') }}
+    {{ getSale('some') }}
+    {{ getSale('other') }}
+  </p>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent, reactive, computed } from 'vue';
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -19,13 +16,41 @@ export default defineComponent({
     msg: String,
   },
   setup() {
-    const state = reactive({ name: 'fff' });
+    const state = reactive({ promo: '', price: 1000 });
+
+    // const getFullName = computed({
+    //   get() {
+    //     // return `${state.firstName} ${state.lastName}`.trim();
+    //   },
+    //
+    //   set(value: string) {
+    //     // return `${state.firstName} ${state.lastName} ${value}`.trim();
+    //   },
+    // });
+
+    const getSale = (promo: string) => {
+      let codes: { [key: string]: number } = {
+        some: 10,
+        other: 20,
+      };
+
+      // eslint-disable-next-line no-prototype-builtins
+      return codes.hasOwnProperty(promo) ? codes[promo] : 0;
+    }; //methods
 
     return {
       state,
+      // getFullName,
+      getSale,
     };
   },
 });
+
+console.dir(defineComponent);
+
+function fullNametoUpperCase() {
+  throw new Error('Function not implemented.');
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
