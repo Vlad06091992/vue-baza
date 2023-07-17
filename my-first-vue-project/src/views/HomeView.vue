@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '@/components/Lesson 1/Methods_reactive_computed.vue'; // @ is an alias to /src
 
 export default defineComponent({
   name: 'HomeView',

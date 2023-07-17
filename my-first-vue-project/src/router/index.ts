@@ -1,11 +1,26 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import Methods_reactive_computed from '@/components/Lesson 1/Methods_reactive_computed.vue';
+import Lesson_1 from '@/components/Lesson 1/Lesson_1.vue';
+import Watch from '@/components/Lesson 1/Watch.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/Lesson_1',
     name: 'home',
-    component: HomeView,
+    component: Lesson_1,
+    children: [
+      {
+        path: 'methods-reactive-computed',
+        name: 'methodsReactiveComputed',
+        component: Methods_reactive_computed,
+      },
+      {
+        path: 'watchers',
+        name: 'watchers',
+        component: Watch,
+      },
+    ],
   },
   {
     path: '/about',
