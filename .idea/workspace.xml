@@ -8,11 +8,7 @@
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +66,7 @@
       <workItem from="1689603477664" duration="4094000" />
       <workItem from="1689937630567" duration="110000" />
       <workItem from="1689937754883" duration="3667000" />
-      <workItem from="1689944328229" duration="7342000" />
+      <workItem from="1689944328229" duration="7984000" />
     </task>
     <servers />
   </component>

@@ -39,12 +39,13 @@ export default defineComponent({
     });
 
     const setSale = (sale: number) => {
+      console.log('called setSale')
       state.sale = sale;
     };
 
-    const sale = computed(() => {
-      getSale(state.promo, setSale);
-    });
+
+
+
 
     const getSale = (promo: string, fn: any) => {
       setTimeout(()=>{
@@ -66,7 +67,6 @@ export default defineComponent({
       state,
       getSale,
       total,
-      sale,
       showSale,
       promo
     };
