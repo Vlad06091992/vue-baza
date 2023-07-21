@@ -8,32 +8,12 @@
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Lesson_1.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Methods_reactive_computed.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Watch.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/router/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/shims-vue.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/store/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/views/AboutView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/views/HomeView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-first-vue-project/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,24 +32,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Admin\\Desktop\\vue\\my-first-vue-project\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\Admin\\Desktop\\vue\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Admin\\Desktop\\vue\\my-first-vue-project\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Desktop\\vue\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project\src\components\Lesson 1" />
@@ -89,7 +69,8 @@
       <workItem from="1689591817122" duration="7649000" />
       <workItem from="1689603477664" duration="4094000" />
       <workItem from="1689937630567" duration="110000" />
-      <workItem from="1689937754883" duration="3360000" />
+      <workItem from="1689937754883" duration="3667000" />
+      <workItem from="1689944328229" duration="7342000" />
     </task>
     <servers />
   </component>

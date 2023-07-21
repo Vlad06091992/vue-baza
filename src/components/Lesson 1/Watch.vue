@@ -1,61 +1,66 @@
 <template>
-  <div>123</div>
+  <div class="hello">hello</div>
+
+  <input
+    type="text"
+    v-model="state.promo"
+
+  />
+  <div>{{ state.price }}</div>
+  <div v-if="showSale">
+    <div class="alert alert-danger">- {{ state.sale }} %</div>
+  </div>
+  <div>{{ total }}</div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, watch, ref } from 'vue';
+import { defineComponent, reactive, computed, watch, onRenderTriggered } from "vue";
 
 export default defineComponent({
-  name: 'Methods_reactive_computed',
+  name: "Methods_reactive_computed",
   props: {
-    msg: String,
+    msg: String
   },
   setup() {
-    let x = ref('3');
-
     const state = reactive({
-      promo: '',
+      promo: "",
       price: 1000,
-      sale: 0,
+      sale: 0
     });
 
+    const promo = watch(()=>state.promo,(value)=>{getSale(value,setSale)})
+
     const total = computed(() => {
-      return state.price * (1 - sale.value / 100);
+      return state.price * (1 - state.sale / 100);
     });
 
     const showSale = computed(() => {
-      return sale.value > 0;
+      return state.sale > 0;
     });
 
-    const checkSale = watch(
-      () => {
-        return state.promo;
-      },
-      (state) => {
-        console.log(state);
-      },
-    );
+    const setSale = (sale: number) => {
+      state.sale = sale;
+    };
 
     const sale = computed(() => {
-      return getSale(state.promo);
+      getSale(state.promo, setSale);
     });
 
-    const getSale = (promo: string) => {
-      let codes: { [key: string]: number } = {
-        some: 10,
-        other: 20,
-      };
-      // eslint-disable-next-line no-prototype-builtins
-      return codes.hasOwnProperty(promo) ? codes[promo] : 0;
+    const getSale = (promo: string, fn: any) => {
+      setTimeout(()=>{
+        let codes: { [key: string]: number } = {
+          some: 10,
+          other: 20
+        };
+
+        let res = codes.hasOwnProperty(promo) ? codes[promo] : 0;
+        fn(res);
+
+      },1000)
+
     }; //methods
 
-    const setSaleInState = () => {
-      state.sale = sale.value;
-    };
 
-    const showState = () => {
-      console.log(state);
-    };
 
     return {
       state,
@@ -63,11 +68,9 @@ export default defineComponent({
       total,
       sale,
       showSale,
-      showState,
-      checkSale,
-      setSaleInState,
+      promo
     };
-  },
+  }
 });
 </script>
 
