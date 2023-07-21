@@ -1,18 +1,9 @@
 <template>
-  <div class="hello">hello</div>
-
-  <input type="text" v-model="state.promo" @input="showState" />
-  <div>{{ state.price }}</div>
-  <div v-if="showSale">
-    <div class="alert alert-danger">- {{ sale }} %</div>
-  </div>
-  <div>{{ total }}</div>
-  <button @click="showState">showState</button>
-  <button @click="setSaleInState">setSale</button>
+  <div>123</div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from 'vue';
+import { defineComponent, reactive, computed, watch, ref } from 'vue';
 
 export default defineComponent({
   name: 'Methods_reactive_computed',
@@ -20,13 +11,15 @@ export default defineComponent({
     msg: String,
   },
   setup() {
+    let x = ref('3');
+
     const state = reactive({
       promo: '',
       price: 1000,
       sale: 0,
     });
 
-    let total = computed(() => {
+    const total = computed(() => {
       return state.price * (1 - sale.value / 100);
     });
 
@@ -34,7 +27,16 @@ export default defineComponent({
       return sale.value > 0;
     });
 
-    let sale = computed(() => {
+    const checkSale = watch(
+      () => {
+        return state.promo;
+      },
+      (state) => {
+        console.log(state);
+      },
+    );
+
+    const sale = computed(() => {
       return getSale(state.promo);
     });
 
@@ -62,6 +64,7 @@ export default defineComponent({
       sale,
       showSale,
       showState,
+      checkSale,
       setSaleInState,
     };
   },

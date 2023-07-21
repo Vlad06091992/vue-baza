@@ -4,20 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ea03270-c97e-4c3a-9d09-9e0d140acf81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my-first-vue-project/.prettierrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Lesson_1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Methods_reactive_computed.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/components/Lesson 1/Watch.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/router/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/shims-vue.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/store/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/views/AboutView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-first-vue-project/vue.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,7 +46,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2SKzM8V0nkhZ8bYVXurjF2OGu8k" />
+  <component name="ProjectId" id="2SLTGLCqRouelevKJlhP6ZgeAgM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,23 +64,32 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "ts.external.directory.path": "C:\\Users\\Admin\\Desktop\\vue\\my-first-vue-project\\node_modules\\typescript\\lib",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Admin\\Desktop\\vue\\my-first-vue-project\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Users\\Admin\\Desktop\\vue\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project\src\components\Lesson 1" />
+      <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ea03270-c97e-4c3a-9d09-9e0d140acf81" name="Changes" comment="" />
-      <created>1688910012785</created>
+      <changelist id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="" />
+      <created>1688924767112</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1688910012785</updated>
-      <workItem from="1688910014360" duration="4258000" />
-      <workItem from="1688915924482" duration="10000" />
-      <workItem from="1688915953486" duration="1002000" />
-      <workItem from="1688917025760" duration="5351000" />
+      <updated>1688924767112</updated>
+      <workItem from="1688924769857" duration="1642000" />
+      <workItem from="1689258477268" duration="7663000" />
+      <workItem from="1689591817122" duration="7649000" />
+      <workItem from="1689603477664" duration="4094000" />
+      <workItem from="1689937630567" duration="110000" />
+      <workItem from="1689937754883" duration="3360000" />
     </task>
     <servers />
   </component>
@@ -76,15 +106,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/vue/dist/vue.d.ts</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
