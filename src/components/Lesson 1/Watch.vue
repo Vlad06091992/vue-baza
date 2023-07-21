@@ -1,10 +1,8 @@
 <template>
   <div class="hello">hello</div>
-
   <input
     type="text"
     v-model="state.promo"
-
   />
   <div>{{ state.price }}</div>
   <div v-if="showSale">
@@ -45,7 +43,7 @@ export default defineComponent({
 
 
 
-
+//TODO 01.22.00
 
     const getSale = (promo: string, fn: any) => {
       setTimeout(()=>{
