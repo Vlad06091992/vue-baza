@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 1/Vfor.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Watch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Methods_reactive_computed.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Methods_reactive_computed.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,9 @@
       <workItem from="1689603477664" duration="4094000" />
       <workItem from="1689937630567" duration="110000" />
       <workItem from="1689937754883" duration="3667000" />
-      <workItem from="1689944328229" duration="7984000" />
+      <workItem from="1689944328229" duration="8246000" />
+      <workItem from="1690032317304" duration="22000" />
+      <workItem from="1690131628634" duration="3173000" />
     </task>
     <servers />
   </component>

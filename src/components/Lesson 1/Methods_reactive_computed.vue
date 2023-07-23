@@ -21,9 +21,7 @@ import { defineComponent, reactive, computed, watch } from 'vue';
 
 export default defineComponent({
   name: 'Methods_reactive_computed',
-  props: {
-    msg: String,
-  },
+  props: {},
   setup() {
     const state = reactive({
       promo: '',
