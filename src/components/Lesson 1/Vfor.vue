@@ -2,7 +2,7 @@
   <div>v-for_ref</div>
   <button type="button" class="btn btn-primary b" @click="addNum">add number</button>
   <ul class="list-group">
-    <li @click="double(index)" class="list-group-item" v-for="(number, index) in numbers" :key="number">index : {{index}} /number:{{ number }} </li>
+    <li @mouseenter="double(index)" class="list-group-item" v-for="(number, index) in numbers" :key="number">index : {{index}} /number:{{ number }} </li>
   </ul>
 </template>
 
@@ -22,8 +22,6 @@ export default defineComponent({
     }
 
     const double = (i:number) => {
-    // console.log(numbers.value[i])
-
       numbers.value[i] = numbers.value[i] * 2
     }
 
