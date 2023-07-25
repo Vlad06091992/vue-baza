@@ -6,7 +6,8 @@
     >
     |
     <router-link to="/Lesson_1/watchers">Watchers</router-link> |
-    <router-link to="/Lesson_1/v-for__ref">v-for and ref</router-link>
+    <router-link to="/Lesson_1/v-for__ref">v-for and ref</router-link> |
+    <router-link to="/Lesson_1/cake">cake</router-link> |
   </nav>
   <router-view />
 </template>

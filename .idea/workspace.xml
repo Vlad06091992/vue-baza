@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/Cake.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Vfor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Vfor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\vue\src\components\Lesson 1\cakeComponent" />
       <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project\src\components\Lesson 1" />
       <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project" />
     </key>
@@ -70,7 +73,7 @@
       <workItem from="1690032317304" duration="22000" />
       <workItem from="1690131628634" duration="3376000" />
       <workItem from="1690135309935" duration="591000" />
-      <workItem from="1690281522176" duration="1475000" />
+      <workItem from="1690281522176" duration="9925000" />
     </task>
     <servers />
   </component>

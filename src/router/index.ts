@@ -4,6 +4,7 @@ import Methods_reactive_computed from "@/components/Lesson 1/Methods_reactive_co
 import Lesson_1 from "@/components/Lesson 1/Lesson_1.vue";
 import Watch from "@/components/Lesson 1/Watch.vue";
 import Vfor from "@/components/Lesson 1/Vfor.vue";
+import Cake from "@/components/Lesson 1/cakeComponent/Cake.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "v-for__ref",
         name: "v_for and ref",
         component: Vfor
+      },
+      {
+        path: "cake",
+        name: "cake",
+        component: Cake
       }
     ]
   },
