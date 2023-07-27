@@ -4,13 +4,13 @@
   <button type="button" class="btn btn-primary b" @click="removeLayer">remove layer</button>
 
   //TODO 01.59.00
-
+<div class="container">
   <div class="row">
     <div class="col col-sm-6">
       <div class="cake " v-for="layer in layers">
         <div class="layer"
              :class="`layer-${layer.type}`"
-             :style="{height:'10px'}"
+             :style="{height:`${layer.height}0px`}"
         ></div>
       </div>
     </div>
@@ -21,26 +21,22 @@
           <th>Height</th>
           <th>Actions</th>
         </tr>
-        <tr v-for="layer in layers">
-          <td><select>
-            <option value="option1">Вариант 1</option>
-            <option value="option2">Вариант 2</option>
-            <option value="option3">Вариант 3</option>
+        <tr v-for="(layer,index) in layers">
+          <td><select v-model="layers[index].type" @change="changeProduct($event, index)">
+            <option  value="biscuit">biscuit</option>
+            <option  value="beze">beze</option>
+            <option  value="curd">curd</option>
           </select></td>
-          <td><input/></td>
-          <td><button>actions</button></td>
-
+          <td><input type="number" @input="changeLayerHeight($event,index)"/></td>
+          <td><font-awesome-icon icon="fa-solid fa-delete-left" @click="removeLayer(index)" /></td>
         </tr>
       </table>
     </div>
   </div>
-  <div>Здесь иконка
-    <font-awesome-icon icon="fa-solid fa-user-secret" />
-
-  </div>
 
   <!--  <img alt="cake layer" :src="biscuit">-->
   <div v-show="hasLayers"> цена {{ totalPrice }} рублей</div>
+</div>
 </template>
 
 //TODO 01.35.00
@@ -52,6 +48,8 @@ type LayerType = {
   type: "biscuit" | "beze" | "curd"
   height: number
 }
+
+type Product = LayerType["type"]
 
 
 import { computed, defineComponent, reactive, ref } from "vue";
@@ -91,8 +89,19 @@ export default defineComponent({
       return layers.length > 0;
     });
 
+    const changeProduct = (event:any, index:number) => {
+      layers[index].type = event.target.value
+    };
+
+    const changeLayerHeight = (event:any, index:number) => {
+      layers[index].height = event.target.value
+    };
+
+
+
     const totalPrice = computed(() => {
       return layers.reduce((acc, el) => {
+        debugger
         acc += el.height * layersTypes[el.type].price1sm;
         return acc;
       }, 0);
@@ -109,15 +118,12 @@ export default defineComponent({
       });
     };
 
-    // const removeLayer = (index: number) => {
-    //   console.log(state)
-    //   state.splice(index, 1);
-    // };
+    const removeLayer = (index: number) => {
 
-    const removeLayer = () => {
-      console.log(layers);
-      layers.splice(layers.length - 1, 1);
+      layers.splice(index, 1);
     };
+
+
 
     return {
       layers,
@@ -125,7 +131,9 @@ export default defineComponent({
       totalPrice,
       addLayer,
       removeLayer,
-      hasLayers
+      hasLayers,
+      changeProduct,
+      changeLayerHeight
     };
 
   }
@@ -135,6 +143,22 @@ export default defineComponent({
 
 <style scoped lang="css">
 
+*{
+  box-sizing: border-box;
+}
+
+table {
+  border-width: 0 1px;
+}
+
+td{
+  border: 1px solid gray;
+  padding:10px
+}
+
+.container{
+  max-width: 80%;
+}
 
 .wrapper {
   padding: 15px;
