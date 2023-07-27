@@ -43,7 +43,6 @@ export default defineComponent({
 
 
 
-//TODO 01.22.00
 
     const getSale = (promo: string, fn: any) => {
       setTimeout(()=>{

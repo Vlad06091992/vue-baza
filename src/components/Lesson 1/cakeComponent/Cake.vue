@@ -3,16 +3,40 @@
   <button type="button" class="btn btn-primary b" @click="addLayer">add layer</button>
   <button type="button" class="btn btn-primary b" @click="removeLayer">remove layer</button>
 
+  //TODO 01.59.00
+
   <div class="row">
     <div class="col col-sm-6">
-      <div class="cake" v-for="layer in layers">
+      <div class="cake " v-for="layer in layers">
         <div class="layer"
              :class="`layer-${layer.type}`"
              :style="{height:'10px'}"
         ></div>
       </div>
     </div>
-    <div class="col col-sm-6">Колонка 2</div>
+    <div class="col col-sm-6">
+      <table class="table table-bordered">
+        <tr>
+          <th>Type</th>
+          <th>Height</th>
+          <th>Actions</th>
+        </tr>
+        <tr v-for="layer in layers">
+          <td><select>
+            <option value="option1">Вариант 1</option>
+            <option value="option2">Вариант 2</option>
+            <option value="option3">Вариант 3</option>
+          </select></td>
+          <td><input/></td>
+          <td><button>actions</button></td>
+
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>Здесь иконка
+    <font-awesome-icon icon="fa-solid fa-user-secret" />
+
   </div>
 
   <!--  <img alt="cake layer" :src="biscuit">-->
@@ -31,7 +55,6 @@ type LayerType = {
 
 
 import { computed, defineComponent, reactive, ref } from "vue";
-
 export default defineComponent({
   name: "cake",
   props: {},
