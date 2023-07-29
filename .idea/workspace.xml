@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/InputComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/Lesson_1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/Cake.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/Cake.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\vue\src\components\Lesson 1\cakeComponent\hw1" />
       <recent name="C:\Users\Admin\Desktop\vue\src\components\Lesson 1\cakeComponent" />
       <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project\src\components\Lesson 1" />
       <recent name="C:\Users\Admin\Desktop\vue\my-first-vue-project" />
@@ -73,7 +79,7 @@
       <workItem from="1690135309935" duration="591000" />
       <workItem from="1690281522176" duration="10077000" />
       <workItem from="1690475058644" duration="4727000" />
-      <workItem from="1690642552280" duration="1621000" />
+      <workItem from="1690642552280" duration="4805000" />
     </task>
     <servers />
   </component>

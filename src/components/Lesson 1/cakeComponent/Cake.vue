@@ -1,42 +1,46 @@
 <template>
   <h1>cake builder</h1>
   <button type="button" class="btn btn-primary b" @click="addLayer">add layer</button>
+  <hr/>
 
-<div class="container">
-  <div class="row" v-show="hasLayers">
-    <div class="col col-sm-6">
-      <div class="cake " v-for="layer in layers">
-        <div class="layer"
-             :class="`layer-${layer.type}`"
-             :style="{height:`${layer.height}0px`}"
-        ></div>
+  <div class="container">
+    <div class="row" v-show="hasLayers">
+      <div class="col col-sm-6">
+        <div class="cake " v-for="layer in layers">
+          <div class="layer"
+               :class="`layer-${layer.type}`"
+               :style="{height:`${layer.height}0px`}"
+               @click="layer.height++"
+               @contextmenu.prevent="layer.height > 1 ? layer.height-- : layers.height = 1 "
+          ></div>
+        </div>
       </div>
-    </div>
-    <div class="col col-sm-6">
-      <table class="table table-bordered">
-        <tr>
-          <th>Type</th>
-          <th>Height</th>
-          <th>Actions</th>
-        </tr>
-        <tr v-for="(layer,index) in layers">
-          <td><select v-model.number="layers[index].type" @change="changeProduct($event, index)">
-<!--            <option  value="biscuit">biscuit</option>-->
-<!--            <option  value="beze">beze</option>-->
-<!--            <option  value="curd">curd</option>-->
+      <div class="col col-sm-6">
+        <table class="table table-bordered">
+          <tr>
+            <th>Type</th>
+            <th>Height</th>
+            <th>Actions</th>
+          </tr>
+          <tr v-for="(layer,index) in layers">
+            <td><select v-model.number="layers[index].type" @change="changeProduct($event, index)">
+              <!--            <option  value="biscuit">biscuit</option>-->
+              <!--            <option  value="beze">beze</option>-->
+              <!--            <option  value="curd">curd</option>-->
 
-            <option :value="type.label" v-for="type in layersTypes">{{type.label}}</option>
+              <option :value="type.label" v-for="type in layersTypes">{{type.label}}</option>
 
-          </select></td>
-          <td><input :value="layers[index].height" type="number" class="form-control" @input="changeLayerHeight($event,index)"/></td>
-          <td><font-awesome-icon icon="fa-solid fa-delete-left" @click="removeLayer(index)" /></td>
-        </tr>
-      </table>
+            </select></td>
+            <td><input :value="layers[index].height" type="number" class="form-control" @input="changeLayerHeight($event,index)"/></td>
+            <td><font-awesome-icon icon="fa-solid fa-delete-left" @click="removeLayer(index)" /></td>
+          </tr>
+        </table>
+      </div>
+      <hr/>
     </div>
+
+    <div class="alert alert-success" v-show="hasLayers"> цена {{ totalPrice }} рублей</div>
   </div>
-
-  <div v-show="hasLayers"> цена {{ totalPrice }} рублей</div>
-</div>
 </template>
 
 //TODO 01.35.00

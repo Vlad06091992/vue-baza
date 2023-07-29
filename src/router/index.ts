@@ -5,6 +5,7 @@ import Lesson_1 from "@/components/Lesson 1/Lesson_1.vue";
 import Watch from "@/components/Lesson 1/Watch.vue";
 import Vfor from "@/components/Lesson 1/Vfor.vue";
 import Cake from "@/components/Lesson 1/cakeComponent/Cake.vue";
+import hw1 from "@/components/Lesson 1/cakeComponent/hw1/hw-1.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +32,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "cake",
         name: "cake",
         component: Cake
+      },
+      {
+        path: "hw1",
+        name: "hw1",
+        component: hw1
       }
     ]
   },
