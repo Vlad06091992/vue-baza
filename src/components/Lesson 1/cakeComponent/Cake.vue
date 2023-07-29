@@ -1,11 +1,9 @@
 <template>
   <h1>cake builder</h1>
   <button type="button" class="btn btn-primary b" @click="addLayer">add layer</button>
-  <button type="button" class="btn btn-primary b" @click="removeLayer">remove layer</button>
 
-  //TODO 01.59.00
 <div class="container">
-  <div class="row">
+  <div class="row" v-show="hasLayers">
     <div class="col col-sm-6">
       <div class="cake " v-for="layer in layers">
         <div class="layer"
@@ -22,19 +20,21 @@
           <th>Actions</th>
         </tr>
         <tr v-for="(layer,index) in layers">
-          <td><select v-model="layers[index].type" @change="changeProduct($event, index)">
-            <option  value="biscuit">biscuit</option>
-            <option  value="beze">beze</option>
-            <option  value="curd">curd</option>
+          <td><select v-model.number="layers[index].type" @change="changeProduct($event, index)">
+<!--            <option  value="biscuit">biscuit</option>-->
+<!--            <option  value="beze">beze</option>-->
+<!--            <option  value="curd">curd</option>-->
+
+            <option :value="type.label" v-for="type in layersTypes">{{type.label}}</option>
+
           </select></td>
-          <td><input type="number" @input="changeLayerHeight($event,index)"/></td>
+          <td><input :value="layers[index].height" type="number" class="form-control" @input="changeLayerHeight($event,index)"/></td>
           <td><font-awesome-icon icon="fa-solid fa-delete-left" @click="removeLayer(index)" /></td>
         </tr>
       </table>
     </div>
   </div>
 
-  <!--  <img alt="cake layer" :src="biscuit">-->
   <div v-show="hasLayers"> цена {{ totalPrice }} рублей</div>
 </div>
 </template>
@@ -101,7 +101,6 @@ export default defineComponent({
 
     const totalPrice = computed(() => {
       return layers.reduce((acc, el) => {
-        debugger
         acc += el.height * layersTypes[el.type].price1sm;
         return acc;
       }, 0);
@@ -126,6 +125,7 @@ export default defineComponent({
 
 
     return {
+      layersTypes,
       layers,
       biscuit,
       totalPrice,
@@ -157,6 +157,7 @@ td{
 }
 
 .container{
+  margin: 10px auto;
   max-width: 80%;
 }
 
