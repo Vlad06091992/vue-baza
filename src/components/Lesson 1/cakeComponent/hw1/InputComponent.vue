@@ -1,6 +1,6 @@
 <template>
-  <p>{{title}}</p>
-  <input v-bind:type='inputType' />
+  <p class="title">{{title}}</p>
+  <input v-bind:type='inputType' :value="value" />
 </template>
 
 <script lang="ts">
@@ -11,6 +11,10 @@ export default defineComponent({
   props: {
     inputType: String,
     title: String,
+    cb:Function,
+    value:{
+      type:[String,Number]
+    }
   },
 
 
@@ -20,3 +24,11 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped lang="css">
+
+.title{
+  margin: 10px 0 0;
+}
+
+</style>
