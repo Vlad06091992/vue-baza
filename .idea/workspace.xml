@@ -9,7 +9,6 @@
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/InputComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/InputComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,7 @@
       <workItem from="1690475058644" duration="4727000" />
       <workItem from="1690642552280" duration="6593000" />
       <workItem from="1690984675424" duration="4225000" />
-      <workItem from="1690992846688" duration="1818000" />
+      <workItem from="1690992846688" duration="4065000" />
     </task>
     <servers />
   </component>

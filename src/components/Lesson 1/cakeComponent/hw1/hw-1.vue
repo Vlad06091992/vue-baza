@@ -9,7 +9,9 @@
   <p>Lastname</p>
   <input v-model="state.lastname" />
 
-  <div >
+  <button :disabled="disabledButton" @click="toggleShow" class="btn btn-primary">send data</button>
+
+  <div v-show="show" >
     <table class="table table-bordered">
       <tr v-for="key in getFieldNames">
         <td>{{ key }}</td>
@@ -24,7 +26,7 @@
 
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
+import { computed, defineComponent, reactive, Ref, ref } from "vue";
 import InputComponent from "./InputComponent.vue";
 
 export default defineComponent({
@@ -35,21 +37,32 @@ export default defineComponent({
   },
   setup() {
     const state = reactive({
-      email: "Smirnov.ru92@mail.ru",
-      phone: 89623163431,
-      firstname: "Vlad",
-      lastname: "Smirnov",
+      email: "",
+      phone: '',
+      firstname: "",
+      lastname: "",
       guests: []
     });
 
-    const show = ref(false);
+    let show = ref(false);
     const getFieldNames = Object.keys(state);
 
+    const toggleShow = () => {
+      console.log(show)
+      show.value = !show.value
+    }
+
+    const disabledButton = computed(()=>{
+      let fields = Object.values(state).filter(el=> !Array.isArray(el))
+      return fields.some(el=> el.length < 1)
+    })
 
     return {
       state,
       show,
-      getFieldNames
+      getFieldNames,
+      toggleShow,
+      disabledButton
     };
   }
 });
@@ -62,6 +75,10 @@ export default defineComponent({
   box-sizing: border-box;
 }
 
+.btn{
+  margin: 10px;
+  display: block;
+}
 table{
   margin-top: 20px;
 }
