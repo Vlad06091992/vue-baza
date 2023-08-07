@@ -8,14 +8,27 @@
   <input v-model="state.firstname" />
   <p>Lastname</p>
   <input v-model="state.lastname" />
+  <button class="btn btn-light" @click="setGuests">guests +</button>
+  <div v-for="(guest, index) in state.guests">
+    <div> Guest {{ index + 1 }}</div>
+    <input v-model="state.guests[index]" type="text" />
+  </div>
+  <hr />
+  <button :disabled="disabledButton" @click="toggleShow" class="btn btn-success">send data</button>
 
-  <button :disabled="disabledButton" @click="toggleShow" class="btn btn-primary">send data</button>
-
-  <div v-show="show" >
+  <div v-show="show">
     <table class="table table-bordered">
       <tr v-for="key in getFieldNames">
         <td>{{ key }}</td>
-        <td>{{ state[key] }}</td>
+        <td v-if="Array.isArray(state[key])">
+          <tr v-for="guest in state.guests">
+            <td>{{ guest }}</td>
+          </tr>
+        </td>
+        <td v-else>{{ state[key] }}</td>
+        <!--        <h1 v-if="awesome">Vue is awesome!</h1>-->
+        <!--        <h1 v-else>Oh no 😢</h1>-->
+
       </tr>
     </table>
   </div>
@@ -29,6 +42,16 @@
 import { computed, defineComponent, reactive, Ref, ref } from "vue";
 import InputComponent from "./InputComponent.vue";
 
+type StateType = {
+
+  email: string,
+  phone: string,
+  firstname: string,
+  lastname: string,
+  guests: string[]
+
+}
+
 export default defineComponent({
   name: "hw1",
   props: {},
@@ -36,9 +59,9 @@ export default defineComponent({
     InputComponent
   },
   setup() {
-    const state = reactive({
+    const state: StateType = reactive({
       email: "",
-      phone: '',
+      phone: "",
       firstname: "",
       lastname: "",
       guests: []
@@ -48,21 +71,27 @@ export default defineComponent({
     const getFieldNames = Object.keys(state);
 
     const toggleShow = () => {
-      console.log(show)
-      show.value = !show.value
-    }
+      console.log(show);
+      show.value = !show.value;
+    };
 
-    const disabledButton = computed(()=>{
-      let fields = Object.values(state).filter(el=> !Array.isArray(el))
-      return fields.some(el=> el.length < 1)
-    })
+    const disabledButton = computed(() => {
+      let fields = Object.values(state).filter(el => !Array.isArray(el));
+      return (fields.some(el => el.length < 1) || state.guests.some(el=> el.length < 1));
+    });
+
+    const setGuests = () => {
+      state.guests.push("");
+    };
+
 
     return {
       state,
       show,
       getFieldNames,
       toggleShow,
-      disabledButton
+      disabledButton,
+      setGuests
     };
   }
 });
@@ -75,11 +104,12 @@ export default defineComponent({
   box-sizing: border-box;
 }
 
-.btn{
+.btn {
   margin: 10px;
   display: block;
 }
-table{
+
+table {
   margin-top: 20px;
 }
 
