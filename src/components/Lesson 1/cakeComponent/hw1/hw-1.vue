@@ -1,5 +1,6 @@
 <template>
   <div>hw-1</div>
+  <form v-if="!show" @submit.prevent="toggleShow" v-show="!show">
   <p>Email</p>
   <input v-model="state.email" />
   <p>Phone</p>
@@ -8,28 +9,51 @@
   <input v-model="state.firstname" />
   <p>Lastname</p>
   <input v-model="state.lastname" />
-  <button class="btn btn-light" @click="setGuests">guests +</button>
-  <div v-for="(guest, index) in state.guests">
-    <div> Guest {{ index + 1 }}</div>
-    <input v-model="state.guests[index]" type="text" />
-  </div>
-  <hr />
-  <button :disabled="disabledButton" @click="toggleShow" class="btn btn-success">send data</button>
+  <input type="button"  class="btn btn-light" @click="addGuests" value="guests +"/>
+    <div  v-for="(guest, index) in state.guests" :key="index">
+      <label> Guest {{ index + 1 }}</label>
+      <input v-model="state.guests[index].name" type="text" />
+    </div>
+    <button :disabled="disabledButton" type="submit"  class="btn btn-success">send data</button>
 
-  <div v-show="show">
+  </form>
+
+
+
+
+  <div v-else>
     <table class="table table-bordered">
-      <tr v-for="key in getFieldNames">
-        <td>{{ key }}</td>
-        <td v-if="Array.isArray(state[key])">
-          <tr v-for="guest in state.guests">
-            <td>{{ guest }}</td>
-          </tr>
-        </td>
-        <td v-else>{{ state[key] }}</td>
-        <!--        <h1 v-if="awesome">Vue is awesome!</h1>-->
-        <!--        <h1 v-else>Oh no 😢</h1>-->
+      <!--      <tr v-for="key in getFieldNames">-->
+      <!--        <td>{{ key }}</td>-->
+      <!--        <td v-if="Array.isArray(state[key])">-->
+      <!--          <tr v-for="guest in state.guests">-->
+      <!--            <td>{{ guest }}</td>-->
+      <!--          </tr>-->
+      <!--        </td>-->
+      <!--        <td v-else>{{ state[key] }}</td>-->
+      <!--      </tr>-->
+      <tr>
+        <td>Email</td>
+        <td>{{ state.email }}</td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>{{ state.phone }}</td>
+      </tr>
+      <tr>
+        <td>Fullname</td>
+<!--        <td>{{ `${state.firstname} ${state.firstname}` }}</td>-->
+        <td>{{fullname}}</td>
 
       </tr>
+    <tr>
+      <td>Guests</td>
+      <td>
+        <ul  class="list-group">
+          <li class="list-group-item" v-for="guests in state.guests">{{guests.name}}</li>
+        </ul>
+      </td>
+    </tr>
     </table>
   </div>
 
@@ -38,18 +62,28 @@
 //TODO 01.35.00
 
 
+
 <script lang="ts">
-import { computed, defineComponent, reactive, Ref, ref } from "vue";
+import { computed, defineComponent, reactive, ref } from "vue";
 import InputComponent from "./InputComponent.vue";
 
-type StateType = {
+class Guest{
+  name: string;
+  constructor(name:string){
+    this.name = name
+  }
+}
 
+type GuestsType = {
+  name:string
+}
+
+type StateType = {
   email: string,
   phone: string,
   firstname: string,
   lastname: string,
-  guests: string[]
-
+  guests: GuestsType[]
 }
 
 export default defineComponent({
@@ -71,17 +105,20 @@ export default defineComponent({
     const getFieldNames = Object.keys(state);
 
     const toggleShow = () => {
-      console.log(show);
       show.value = !show.value;
     };
 
-    const disabledButton = computed(() => {
+    const formReady = computed(() => {
       let fields = Object.values(state).filter(el => !Array.isArray(el));
-      return (fields.some(el => el.length < 1) || state.guests.some(el=> el.length < 1));
+      return (fields.some((el: any) => el.trim().length < 1) || state.guests.some((el: GuestsType) => el.name.trim().length < 1));
     });
 
-    const setGuests = () => {
-      state.guests.push("");
+    const fullname = computed(() => {
+      return `${state.firstname} ${state.lastname}`
+    });
+
+    const addGuests = () => {
+      state.guests.push(new Guest(''));
     };
 
 
@@ -90,8 +127,9 @@ export default defineComponent({
       show,
       getFieldNames,
       toggleShow,
-      disabledButton,
-      setGuests
+      disabledButton: formReady,
+      addGuests,
+      fullname
     };
   }
 });

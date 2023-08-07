@@ -1,8 +1,16 @@
 <template>
-  <nav>
-    <router-link to="/Lesson_1">Lesson 1</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+ <div class="flex">
+
+
+    <nav>
+      <router-link to="/Lesson_1">Lesson 1</router-link>
+      |
+      <router-link to="/Lesson_2">Lesson 2</router-link>
+      |
+      <router-link to="/about">About</router-link>
+      |
+    </nav>
+ </div>
   <router-view />
 </template>
 
@@ -15,8 +23,14 @@
   margin: 10px;
 }
 
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
 nav {
   padding: 30px;
+
 
   a {
     font-weight: bold;
@@ -28,3 +42,5 @@ nav {
   }
 }
 </style>
+<script setup lang="ts">
+</script>

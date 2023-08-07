@@ -6,11 +6,13 @@ import Watch from "@/components/Lesson 1/Watch.vue";
 import Vfor from "@/components/Lesson 1/Vfor.vue";
 import Cake from "@/components/Lesson 1/cakeComponent/Cake.vue";
 import hw1 from "@/components/Lesson 1/cakeComponent/hw1/hw-1.vue";
+import Lesson_2 from "@/components/Lesson 2/Lesson_2.vue";
+import One from "@/components/Lesson 2/one.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/Lesson_1",
-    name: "home",
+    name: "lesson1",
     component: Lesson_1,
     children: [
       {
@@ -41,15 +43,20 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue")
+    path: "/Lesson_2",
+    name: "lesson2",
+    component: Lesson_2,
+    children: [
+      {
+        path: "one",
+        name: "one",
+        component: One
+      }
+
+    ],
   }
-];
+
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
