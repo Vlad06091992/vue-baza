@@ -1,26 +1,23 @@
+//TODO 0.38.00
+
 <template>
   <div>hw-1</div>
   <form v-if="!show" @submit.prevent="toggleShow" v-show="!show">
   <p>Email</p>
-  <input v-model="state.email" />
+  <input ref="firstInp" class="form-control" v-model="state.email" />
   <p>Phone</p>
-  <input v-model="state.phone" />
+  <input class="form-control" v-model="state.phone" />
   <p>Firstname</p>
-  <input v-model="state.firstname" />
+  <input class="form-control" v-model="state.firstname" />
   <p>Lastname</p>
-  <input v-model="state.lastname" />
+  <input class="form-control" v-model="state.lastname" />
   <input type="button"  class="btn btn-light" @click="addGuests" value="guests +"/>
     <div  v-for="(guest, index) in state.guests" :key="index">
-      <label> Guest {{ index + 1 }}</label>
-      <input v-model="state.guests[index].name" type="text" />
+      <label @dblclick="removeGuest(index)"> Guest {{ index + 1 }}</label>
+      <input class="form-control" v-model="guest.name" type="text" autofocus />
     </div>
     <button :disabled="disabledButton" type="submit"  class="btn btn-success">send data</button>
-
   </form>
-
-
-
-
   <div v-else>
     <table class="table table-bordered">
       <!--      <tr v-for="key in getFieldNames">-->
@@ -102,6 +99,7 @@ export default defineComponent({
     });
 
     let show = ref(false);
+    let firstInp = ref(null);
     const getFieldNames = Object.keys(state);
 
     const toggleShow = () => {
@@ -118,8 +116,14 @@ export default defineComponent({
     });
 
     const addGuests = () => {
+      console.log(firstInp)
       state.guests.push(new Guest(''));
     };
+
+    const removeGuest = (index:number) => {
+      state.guests.splice(index,1);
+    };
+
 
 
     return {
@@ -129,7 +133,8 @@ export default defineComponent({
       toggleShow,
       disabledButton: formReady,
       addGuests,
-      fullname
+      fullname,
+      removeGuest
     };
   }
 });
@@ -141,6 +146,11 @@ export default defineComponent({
 * {
   box-sizing: border-box;
 }
+
+.form-control{
+  width: 300px;
+}
+
 
 .btn {
   margin: 10px;
