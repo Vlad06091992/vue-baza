@@ -7,7 +7,7 @@ import Vfor from "@/components/Lesson 1/Vfor.vue";
 import Cake from "@/components/Lesson 1/cakeComponent/Cake.vue";
 import hw1 from "@/components/Lesson 1/cakeComponent/hw1/hw-1.vue";
 import Lesson_2 from "@/components/Lesson 2/Lesson_2.vue";
-import One from "@/components/Lesson 2/one.vue";
+import One from "@/components/Lesson 2/lifecycles.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -48,8 +48,8 @@ const routes: Array<RouteRecordRaw> = [
     component: Lesson_2,
     children: [
       {
-        path: "one",
-        name: "one",
+        path: "lifecycles",
+        name: "lifecycles",
         component: One
       }
 

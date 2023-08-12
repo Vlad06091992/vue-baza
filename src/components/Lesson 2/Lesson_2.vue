@@ -1,8 +1,8 @@
 <template>
   <div>Lesson 2</div>
   <nav>
-    <router-link to="/Lesson_2/one"
-    >one
+    <router-link to="/Lesson_2/lifecycles"
+    >lifecycles
     </router-link
     >
 <!--    |-->
