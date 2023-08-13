@@ -3,8 +3,10 @@
   <nav>
     <router-link to="/Lesson_2/lifecycles"
     >lifecycles
-    </router-link
-    >
+    </router-link>
+   | <router-link to="/Lesson_2/hw1refs"
+    >hw-1-refs
+    </router-link>
 <!--    |-->
 <!--    <router-link to="/Lesson_1/watchers">Watchers</router-link>-->
 <!--    |-->

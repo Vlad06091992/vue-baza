@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 2/hw1Refs.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/one.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/one.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/lifecycles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/lifecycles.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@vue/reactivity/dist/reactivity.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,7 +90,8 @@
       <workItem from="1690992846688" duration="4766000" />
       <workItem from="1691407811521" duration="11588000" />
       <workItem from="1691597267946" duration="4615000" />
-      <workItem from="1691858136094" duration="4252000" />
+      <workItem from="1691858136094" duration="4929000" />
+      <workItem from="1691944165825" duration="6203000" />
     </task>
     <servers />
   </component>

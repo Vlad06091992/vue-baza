@@ -7,9 +7,13 @@
   </div>
 </template>
 
+//TODO 01.11
 
 <script lang="ts">
-import { computed, defineComponent, onBeforeMount, onBeforeUpdate, onMounted, onUpdated, reactive, ref } from "vue";
+import {
+  computed, defineComponent, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted,
+  onUnmounted, onUpdated, reactive, ref
+} from "vue";
 
 
 export default defineComponent({
@@ -43,14 +47,22 @@ export default defineComponent({
         console.log(state);
 
       });
+    onBeforeUnmount(()=>{
+      console.log("beforeUnmount");
+    })
 
+    onUnmounted(()=>{
+      console.log("onMounted");
+    })
 
     return {
       state
 
     };
   }
+
 });
+
 </script>
 
 
