@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lesson 2/hw1Refs.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 2/ClassesAndForms.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/lifecycles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/lifecycles.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/hw1Refs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/hw1Refs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +91,8 @@
       <workItem from="1691407811521" duration="11588000" />
       <workItem from="1691597267946" duration="4615000" />
       <workItem from="1691858136094" duration="4929000" />
-      <workItem from="1691944165825" duration="6203000" />
+      <workItem from="1691944165825" duration="6371000" />
+      <workItem from="1692204098401" duration="3993000" />
     </task>
     <servers />
   </component>

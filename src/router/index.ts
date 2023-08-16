@@ -9,6 +9,7 @@ import hw1 from "@/components/Lesson 1/cakeComponent/hw1/hw-1.vue";
 import Lesson_2 from "@/components/Lesson 2/Lesson_2.vue";
 import One from "@/components/Lesson 2/lifecycles.vue";
 import hw1Refs from "@/components/Lesson 2/hw1Refs.vue";
+import ClassesAndForms from "@/components/Lesson 2/ClassesAndForms.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -57,6 +58,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "hw1refs",
         name: "hw1refs",
         component: hw1Refs
+      },
+      {
+        path: "ClassesAndForms",
+        name: "ClassesAndForms",
+        component: ClassesAndForms
       }
 
     ],

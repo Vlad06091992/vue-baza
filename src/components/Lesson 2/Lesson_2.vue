@@ -4,18 +4,23 @@
     <router-link to="/Lesson_2/lifecycles"
     >lifecycles
     </router-link>
-   | <router-link to="/Lesson_2/hw1refs"
+    |
+    <router-link to="/Lesson_2/hw1refs"
+
     >hw-1-refs
     </router-link>
-<!--    |-->
-<!--    <router-link to="/Lesson_1/watchers">Watchers</router-link>-->
-<!--    |-->
-<!--    <router-link to="/Lesson_1/v-for__ref">v-for and ref</router-link>-->
-<!--    |-->
-<!--    <router-link to="/Lesson_1/cake">cake</router-link>-->
-<!--    |-->
-<!--    <router-link to="/Lesson_1/hw1">hw1</router-link>-->
-<!--    |-->
+    |
+    <router-link to="/Lesson_2/ClassesAndForms">ClassesAndForms
+    </router-link>
+    <!--    |-->
+    <!--    <router-link to="/Lesson_1/watchers">Watchers</router-link>-->
+    <!--    |-->
+    <!--    <router-link to="/Lesson_1/v-for__ref">v-for and ref</router-link>-->
+    <!--    |-->
+    <!--    <router-link to="/Lesson_1/cake">cake</router-link>-->
+    <!--    |-->
+    <!--    <router-link to="/Lesson_1/hw1">hw1</router-link>-->
+    <!--    |-->
   </nav>
   <router-view />
 </template>

@@ -1,4 +1,4 @@
-//TODO 0.38.00
+//TODO 01.31.00
 
 <template>
   <div>hw-1</div>
@@ -14,21 +14,12 @@
     <input type="button" class="btn btn-light" @click="addGuests" value="guests +" />
     <div v-for="(guest, index) in state.guests" :key="index">
       <label @dblclick="removeGuest(index)"> Guest {{ index + 1 }}</label>
-      <input class="form-control" v-model="guest.name" type="text" autofocus ref="arrayGuestsInputs" />
+      <input class="form-control" v-model="guest.name" type="text" ref="arrayGuestsInputs" />
     </div>
     <button :disabled="disabledButton" type="submit" class="btn btn-success">send data</button>
   </form>
   <div v-else>
     <table class="table table-bordered">
-      <!--      <tr v-for="key in getFieldNames">-->
-      <!--        <td>{{ key }}</td>-->
-      <!--        <td v-if="Array.isArray(state[key])">-->
-      <!--          <tr v-for="guest in state.guests">-->
-      <!--            <td>{{ guest }}</td>-->
-      <!--          </tr>-->
-      <!--        </td>-->
-      <!--        <td v-else>{{ state[key] }}</td>-->
-      <!--      </tr>-->
       <tr>
         <td>Email</td>
         <td>{{ state.email }}</td>
@@ -60,7 +51,7 @@
 
 
 <script lang="ts">
-import { computed, defineComponent, reactive, ref, onMounted, onUpdated } from "vue";
+import { computed, defineComponent, nextTick, onUpdated, reactive, ref } from "vue";
 
 
 class Guest {
@@ -101,11 +92,7 @@ export default defineComponent({
     const getFieldNames = Object.keys(state);
 
     onUpdated(() => {
-      console.log(arrayGuestsInputs.value?.length)
-      if (arrayGuestsInputs.value?.length) {
-        arrayGuestsInputs.value[arrayGuestsInputs.value?.length - 1].focus()
-      }
-
+      debugger
     });
     const toggleShow = () => {
       show.value = !show.value;
@@ -121,14 +108,18 @@ export default defineComponent({
     });
 
     const addGuests = () => {
-
-      setTimeout(()=>{
-        console.log('setTimeout' + ' ' + arrayGuestsInputs.value?.length)
-
-      },1000)
-
-
       state.guests.push(new Guest(""));
+
+      nextTick(() => {
+        debugger
+        if (arrayGuestsInputs.value) {
+          arrayGuestsInputs.value[arrayGuestsInputs.value.length - 1].focus();
+        }
+      }).then(() => {
+        debugger
+      });
+
+
     };
 
     const removeGuest = (index: number) => {
