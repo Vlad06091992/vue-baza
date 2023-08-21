@@ -12,6 +12,8 @@
     |
     <router-link to="/Lesson_2/ClassesAndForms">ClassesAndForms
     </router-link>
+    <router-link to="/Lesson_2/hw2scroll">hw2scroll
+    </router-link>
     <!--    |-->
     <!--    <router-link to="/Lesson_1/watchers">Watchers</router-link>-->
     <!--    |-->
@@ -27,9 +29,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Hw2scroll from "@/components/Lesson 2/hw2scroll.vue";
 
 export default defineComponent({
   name: "Lesson_2",
+  components: { Hw2scroll },
   props: {
     msg: String
   }

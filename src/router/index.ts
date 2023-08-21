@@ -10,6 +10,7 @@ import Lesson_2 from "@/components/Lesson 2/Lesson_2.vue";
 import One from "@/components/Lesson 2/lifecycles.vue";
 import hw1Refs from "@/components/Lesson 2/hw1Refs.vue";
 import ClassesAndForms from "@/components/Lesson 2/ClassesAndForms.vue";
+import hw2scroll from "@/components/Lesson 2/hw2scroll.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -63,12 +64,17 @@ const routes: Array<RouteRecordRaw> = [
         path: "ClassesAndForms",
         name: "ClassesAndForms",
         component: ClassesAndForms
+      },
+      {
+        path: "hw2scroll",
+        name: "hw2scroll",
+        component: hw2scroll
       }
 
-    ],
+    ]
   }
 
-]
+];
 
 const router = createRouter({
   history: createWebHashHistory(),

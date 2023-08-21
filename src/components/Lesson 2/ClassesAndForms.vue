@@ -20,16 +20,16 @@
     </div>
     <div v-for="(val, key) in tableClasses">
       <label>
-        <input type="checkbox" v-model="tableStyles[key]" />{{key}}
+        <input type="checkbox" v-model="tableClasses[key]" />{{ key }}
 
       </label>
     </div>
 
 
+    <!--    <input type="checkbox" v-model="checkbox" />{{key}}-->
 
 
-
-    <table class="table " :class="tableClasses" >
+    <table class="table" :class="tableClasses">
       <tr>
         <td>some</td>
         <td>some</td>
@@ -52,6 +52,16 @@
   <div :class="state.color">test color(state.color)</div>
   <div :class="computedClasses">test color(computed class return object)</div>
 
+  <!--  <input type="checkbox" id="jack" value="Джек" v-model="checkedNames">-->
+  <!--  <label for="jack">Джек</label>-->
+  <!--  <input type="checkbox" id="john" value="Джон" v-model="checkedNames">-->
+  <!--  <label for="john">Джон</label>-->
+  <!--  <input type="checkbox" id="mike" value="Майк" v-model="checkedNames">-->
+  <!--  <label for="mike">Майк</label>-->
+  <!--  <br>-->
+  <!--  <span>Отмеченные имена: {{ checkedNames }}</span>-->
+
+
 </template>
 
 <script lang="ts">
@@ -66,19 +76,15 @@ export default defineComponent({
       color: "green"
     });
 
-    let tableStyles = reactive({
-      red: false,
-      hover: false,
-      bordered: false
-    });
 
-    const tableClasses = computed(() => {
-      return {
-        "table-bordered": tableStyles.bordered,
-        "table-hover": tableStyles.hover,
-        "red": tableStyles.red
-      };
+    let checkbox = ref<HTMLInputElement>();
+
+    const tableClasses = reactive({
+      "table-bordered": true,
+      "table-danger": true,
+      "green": true
     });
+    ;
 
 
     const computedClasses = computed(() => {
@@ -90,7 +96,7 @@ export default defineComponent({
       };
     });
 
-    return { state, computedClasses, tableClasses, tableStyles };
+    return { state, computedClasses, tableClasses,  checkbox };
 
   }
 });
