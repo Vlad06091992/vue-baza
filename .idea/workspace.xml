@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lesson 2/hw2scroll.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/classes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../нативка/eventLoop/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/ClassesAndForms.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/ClassesAndForms.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/Lesson_2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 2/hw2scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 2/hw2scroll.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,7 @@
       <workItem from="1691944165825" duration="6371000" />
       <workItem from="1692204098401" duration="4110000" />
       <workItem from="1692549184811" duration="8501000" />
-      <workItem from="1692633542252" duration="8702000" />
+      <workItem from="1692633542252" duration="12069000" />
     </task>
     <servers />
   </component>

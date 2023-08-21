@@ -29,6 +29,10 @@
             <input class="form-check-input" type="checkbox"  v-model="agreeAll">
             agree all
           </label>
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" value="getSpam"  v-model="state.getSpam">
+            get spam
+          </label>
         </div>
         <div class="form-check" v-show="state.endScroll">
 <!--          <label class="form-check-label">-->
@@ -63,14 +67,11 @@ export default defineComponent({
   setup(props, ctx) {
     const state: any = reactive({
       endScroll:false,
-      // endScroll: true,
-      // agreeAll:false
+      getSpam:false
     });
 
-    debugger
+    const agreeAll = ref(null)
 
-    const agreeAll = ref(false)
-    const getSpam = ref()
 
     const scrollEvent = (e: any) => {
       console.log(e.target.scrollTop + e.target.clientHeight);
@@ -81,16 +82,17 @@ export default defineComponent({
       }
     };
 
-    const disabledButton = computed(() => {
-      debugger
-      // return getSpam.value && agreeAll.value
-      return agreeAll.value
+    const changeGetSpam = ()=>{
 
+    }
+
+    const disabledButton = computed(() => {
+      return  !(!state.getSpam && !agreeAll.value)
     });
 
 
     return {
-      state, scrollEvent,disabledButton,agreeAll,getSpam
+      state, scrollEvent,disabledButton,agreeAll
     };
   }
 })
