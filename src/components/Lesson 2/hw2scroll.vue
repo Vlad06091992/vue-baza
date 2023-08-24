@@ -1,8 +1,8 @@
 <template>
-  <div class="wrapper" >
+  <div class="wrapper">
     <div class="sample">
-      <form v-show="!showTable">
-        <div v-on:scroll="scrollEvent" class="content alert alert-info" >
+      <form v-show="showTable">
+        <div @scroll="scrollEvent" class="content alert alert-info">
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
@@ -24,7 +24,10 @@
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
         </div>
-        <div class="form-check" v-show="state.endScroll" >
+
+        <div class="scrollProgress" :style="progressStyle"></div>
+        <hr>
+        <div class="form-check" v-show="scrollDone">
           <div>
             <label class="form-check-label">
               <input class="form-check-input" type="checkbox" v-model="agreeAll">
@@ -52,14 +55,14 @@
               </div>
             </div>
           </div>
+
+          <hr>
+          <button :disabled="disabledButton" @click="showTableHandler" class="btn btn-primary">
+                  Send Data
+          </button>
         </div>
 
-        <div class="form-check" v-show="state.endScroll">
-        </div>
-        <hr>
-        <button :disabled="disabledButton" @click="showTableHandler" class="btn btn-primary" v-show="state.endScroll">
-          Send Data
-        </button>
+
       </form>
       <div>
 
@@ -79,8 +82,11 @@
           get spam
         </td>
         <td :class={red:!state.getSpam,green:state.getSpam}>
-          {{ state.getSpam ? "yes" : "no" }}
+          {{ isSpam }}
         </td>
+        <!--        <td :class={red:!state.getSpam,green:state.getSpam}>-->
+        <!--          {{ state.getSpam ? "yes" : "no" }}-->
+        <!--        </td>-->
       </tr>
       <tr v-show="state.spamSettings">
         <td>
@@ -96,7 +102,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive, ref, onMounted, onUpdated, nextTick } from "vue";
+import { computed, defineComponent, reactive, ref, onMounted, onUpdated, nextTick, watch } from "vue";
 
 export default defineComponent({
   name: "hw2scroll",
@@ -104,41 +110,56 @@ export default defineComponent({
   components: {},
   setup(props, ctx) {
     const state: any = reactive({
-      endScroll: false,
       getSpam: false,
-      spamSettings: null
+      spamSettings: null,
+      scrollValue: 0
     });
 
-    const showTable = ref(false)
+    const one = 1;
+
+    const showTable = ref(false);
     const agreeAll = ref(null);
     const phoneSpam = ref(null);
 
-    const showTableHandler = () =>{
-      showTable.value = true
-    }
-
-    const scrollEvent = (e: any) => {
-      console.log(e.target.scrollTop + e.target.clientHeight);
-      console.log(e.target.scrollHeight);
-
-      if (e.target.scrollTop + e.target.clientHeight + 1 >= e.target.scrollHeight) {
-        state.endScroll = true;
-      }
-    };
-
-    const changeGetSpam = () => {
-
-    };
-
-    const disabledButton = computed(() => {
-      // return  !(state.getSpam && agreeAll.value)
-      return !agreeAll.value;
-      // return  !state.getSpam
+    const isSpam = computed(() => {
+      return state.getSpam ? "yes" : "now";
     });
 
 
+    const showTableHandler = () => {
+      showTable.value = true;
+    };
+
+
+    const scrollEvent = (e: any) => {
+      let currentScrollValue = Math.floor((e.target.scrollTop + 1) / (e.target.scrollHeight - e.target.clientHeight) * 100);
+      state.scrollValue = Math.max(currentScrollValue, state.scrollValue);
+    };
+
+
+    const scrollDone = computed(() => {
+      return state.scrollValue > 99;
+    });
+
+    const disabledButton = computed(() => {
+      return !agreeAll.value;
+    });
+
+    const progressStyle = computed(() => {
+      return { width: `${state.scrollValue}%` };
+    });
+
     return {
-      state, scrollEvent, disabledButton, agreeAll, phoneSpam,showTable, showTableHandler
+      state,
+      scrollEvent,
+      disabledButton,
+      agreeAll,
+      phoneSpam,
+      showTable,
+      showTableHandler,
+      isSpam,
+      progressStyle,
+      scrollDone
     };
   }
 })
@@ -164,6 +185,11 @@ export default defineComponent({
 
 .red {
   color: red;
+}
+
+.scrollProgress {
+  background: blue;
+  height: 20px;
 }
 
 </style>

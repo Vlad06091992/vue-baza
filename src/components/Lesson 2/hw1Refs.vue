@@ -98,6 +98,8 @@ export default defineComponent({
       show.value = !show.value;
     };
 
+
+
     const formReady = computed(() => {
       let fields = Object.values(state).filter(el => !Array.isArray(el));
       return (fields.some((el: any) => el.trim().length < 1) || state.guests.some((el: GuestsType) => el.name.trim().length < 1));
