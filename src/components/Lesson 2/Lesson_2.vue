@@ -12,7 +12,7 @@
     |
     <router-link to="/Lesson_2/ClassesAndForms">ClassesAndForms
     </router-link>
-    <router-link to="/Lesson_2/hw2scroll">hw2scroll
+    |<router-link to="/Lesson_2/hw2scroll">hw2scroll
     </router-link>
     <!--    |-->
     <!--    <router-link to="/Lesson_1/watchers">Watchers</router-link>-->

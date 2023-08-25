@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="sample">
-      <form v-show="showTable">
+      <form v-show="!showTable">
         <div @scroll="scrollEvent" class="content alert alert-info">
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
           <p>This text no one reads. This text no one reads. This text no one reads.</p>
@@ -57,7 +57,7 @@
           </div>
 
           <hr>
-          <button :disabled="disabledButton" @click="showTableHandler" class="btn btn-primary">
+          <button :disabled="disabledButton" type="button" @click="showTableHandler" class="btn btn-primary">
                   Send Data
           </button>
         </div>
@@ -73,7 +73,8 @@
         <td>
           agree all
         </td>
-        <td :class={green:!disabledButton}>
+<!--        <td :class=tableStyles>-->
+        <td :class={green:state.getSpam}>
           yes
         </td>
       </tr>
@@ -81,12 +82,14 @@
         <td>
           get spam
         </td>
-        <td :class={red:!state.getSpam,green:state.getSpam}>
-          {{ isSpam }}
+
+<!--        <td :class={red:!state.getSpam,green:state.getSpam}>-->
+<!--          {{ isSpam }}-->
+<!--        </td>-->
+        <td>
+          <TableCellSpan/>
         </td>
-        <!--        <td :class={red:!state.getSpam,green:state.getSpam}>-->
-        <!--          {{ state.getSpam ? "yes" : "no" }}-->
-        <!--        </td>-->
+
       </tr>
       <tr v-show="state.spamSettings">
         <td>
@@ -98,16 +101,15 @@
       </tr>
     </table>
   </div>
-
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, reactive, ref, onMounted, onUpdated, nextTick, watch } from "vue";
-
+import TableCellSpan from "./TableCellSpan.vue";
 export default defineComponent({
   name: "hw2scroll",
   props: {},
-  components: {},
+  components: {TableCellSpan},
   setup(props, ctx) {
     const state: any = reactive({
       getSpam: false,
@@ -149,6 +151,8 @@ export default defineComponent({
       return { width: `${state.scrollValue}%` };
     });
 
+
+
     return {
       state,
       scrollEvent,
@@ -159,7 +163,7 @@ export default defineComponent({
       showTableHandler,
       isSpam,
       progressStyle,
-      scrollDone
+      scrollDone,
     };
   }
 })
@@ -179,13 +183,7 @@ export default defineComponent({
   padding: 15px;
 }
 
-.green {
-  color: green;
-}
 
-.red {
-  color: red;
-}
 
 .scrollProgress {
   background: blue;
