@@ -5,17 +5,23 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { computed } from "vue";
+import { types } from "sass";
+import Null = types.Null;
+
 
 export default defineComponent({
   name: "TableCellSpan",
   props: {
-    value: String
+    value: {
+      type: String,
+      required: false
+    }
   },
   components: {},
 
 
   setup(props, ctx) {
-
+    debugger
     const text = computed(() => {
       return props.value ? "yes" : "no";
     });

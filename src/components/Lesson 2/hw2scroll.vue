@@ -58,7 +58,7 @@
 
           <hr>
           <button :disabled="disabledButton" type="button" @click="showTableHandler" class="btn btn-primary">
-                  Send Data
+            Send Data
           </button>
         </div>
 
@@ -73,9 +73,10 @@
         <td>
           agree all
         </td>
-<!--        <td :class=tableStyles>-->
-        <td :class={green:state.getSpam}>
-          yes
+        <!--        <td :class=tableStyles>-->
+        <td>
+          <TableCellSpan :value="agreeAll? agreeAll : undefined" />
+
         </td>
       </tr>
       <tr>
@@ -83,12 +84,11 @@
           get spam
         </td>
 
-<!--        <td :class={red:!state.getSpam,green:state.getSpam}>-->
-<!--          {{ isSpam }}-->
-<!--        </td>-->
         <td>
-          <TableCellSpan/>
+          <TableCellSpan :value=" isSpam
+          " />
         </td>
+
 
       </tr>
       <tr v-show="state.spamSettings">
@@ -106,10 +106,11 @@
 <script lang="ts">
 import { computed, defineComponent, reactive, ref, onMounted, onUpdated, nextTick, watch } from "vue";
 import TableCellSpan from "./TableCellSpan.vue";
+
 export default defineComponent({
   name: "hw2scroll",
   props: {},
-  components: {TableCellSpan},
+  components: { TableCellSpan },
   setup(props, ctx) {
     const state: any = reactive({
       getSpam: false,
@@ -124,7 +125,7 @@ export default defineComponent({
     const phoneSpam = ref(null);
 
     const isSpam = computed(() => {
-      return state.getSpam ? "yes" : "now";
+      return state.getSpam ? "yes" : null;
     });
 
 
@@ -152,7 +153,6 @@ export default defineComponent({
     });
 
 
-
     return {
       state,
       scrollEvent,
@@ -163,7 +163,7 @@ export default defineComponent({
       showTableHandler,
       isSpam,
       progressStyle,
-      scrollDone,
+      scrollDone
     };
   }
 })
@@ -182,7 +182,6 @@ export default defineComponent({
   max-width: 900px;
   padding: 15px;
 }
-
 
 
 .scrollProgress {
