@@ -1,0 +1,32 @@
+<template>
+  <div>Lesson 3</div>
+  <nav>
+    <router-link to="/Lesson_3/todo-components"
+    >
+      <todo-components />
+    </router-link>
+
+  </nav>
+  <router-view />
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import TodoComponents from "@/components/Lesson 3/TodoComponents.vue";
+
+export default defineComponent({
+  name: "Lesson_3",
+  components: { TodoComponents },
+  props: {
+    msg: String
+  }
+});
+</script>
+
+<style scoped>
+
+* {
+  text-align: center;
+}
+
+</style>

@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 import Methods_reactive_computed from "@/components/Lesson 1/Methods_reactive_computed.vue";
 import Lesson_1 from "@/components/Lesson 1/Lesson_1.vue";
 import Watch from "@/components/Lesson 1/Watch.vue";
@@ -11,6 +10,8 @@ import One from "@/components/Lesson 2/lifecycles.vue";
 import hw1Refs from "@/components/Lesson 2/hw1Refs.vue";
 import ClassesAndForms from "@/components/Lesson 2/ClassesAndForms.vue";
 import hw2scroll from "@/components/Lesson 2/hw2scroll.vue";
+import Lesson_3 from "@/components/Lesson 3/Lesson_3.vue";
+import TodoComponents from "@/components/Lesson 3/TodoComponents.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -72,8 +73,19 @@ const routes: Array<RouteRecordRaw> = [
       }
 
     ]
+  },
+  {
+    path: "/Lesson_3",
+    name: "lesson3",
+    component: Lesson_3,
+    children: [
+      {
+        path: "todo-components",
+        name: "todo-components",
+        component: TodoComponents
+      }
+    ]
   }
-
 ];
 
 const router = createRouter({
