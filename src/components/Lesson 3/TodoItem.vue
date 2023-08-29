@@ -36,11 +36,17 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const todoItem = ref(props.todoItem).value
+    const todoItem = ref(props.todoItem).value;
     const getActionClass = computed(() => {
-      return todoItem.current / todoItem.max >= 1 ? "alert-success" : "alert-danger";
+      let val = todoItem.current / todoItem.max;
+
+      return {
+        "alert-danger": val < 0.25,
+        "alert-warning": val >= 0.25 && val < 0.75,
+        "alert-success": val >= 0.75
+      };
     });
-    return { props, getActionClass,todoItem};
+    return { props, getActionClass, todoItem };
   }
 });
 </script>
