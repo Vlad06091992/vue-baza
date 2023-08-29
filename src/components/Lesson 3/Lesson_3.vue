@@ -3,7 +3,7 @@
   <nav>
     <router-link to="/Lesson_3/todo-components"
     >
-      <todo-components />
+      Todo
     </router-link>
 
   </nav>

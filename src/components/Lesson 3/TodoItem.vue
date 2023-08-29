@@ -1,0 +1,50 @@
+<template>
+  <div class="alert" :class="getActionClass">
+    <h2>{{ todoItem.title }}</h2>
+    <div class="progress">
+      <div :style="{width: (todoItem.current / todoItem.max * 100) + '%'}"
+           class="progress-bar"
+      >
+      </div>
+    </div>
+    <hr>
+    <h3 v-if="todoItem.current === todoItem.max">All done!</h3>
+    <button v-else type="button" class="btn btn-primary" @click="props.makeStep(todoItem)">
+      I make step!
+    </button>
+  </div>
+</template>
+
+<script lang="ts">
+import { computed, defineComponent, ref } from "vue";
+import { TodoType } from "./TodoComponents.vue";
+import "@/styles/styles.css";
+import "@/styles/font-awesome.min.css";
+import "@/styles/bootstrap.min.css";
+
+export default defineComponent({
+  name: "TodoItem",
+  components: {},
+  props: {
+    todoItem: {
+      type: Object as () => TodoType,
+      required: true
+    },
+    makeStep: {
+      type: Function,
+      required: true
+    }
+  },
+  setup(props) {
+    const todoItem = ref(props.todoItem).value
+    const getActionClass = computed(() => {
+      return todoItem.current / todoItem.max >= 1 ? "alert-success" : "alert-danger";
+    });
+    return { props, getActionClass,todoItem};
+  }
+});
+</script>
+
+<style lang="css" scoped>
+
+</style>
