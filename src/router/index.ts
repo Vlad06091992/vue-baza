@@ -12,6 +12,7 @@ import ClassesAndForms from "@/components/Lesson 2/ClassesAndForms.vue";
 import hw2scroll from "@/components/Lesson 2/hw2scroll.vue";
 import Lesson_3 from "@/components/Lesson 3/Lesson_3.vue";
 import TodoComponents from "@/components/Lesson 3/TodoComponents.vue";
+import hw3 from "@/components/Lesson 3/hw3.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -83,6 +84,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "todo-components",
         name: "todo-components",
         component: TodoComponents
+      },
+      {
+        path: "hw3",
+        name: "hw3",
+        component: hw3
       }
     ]
   }

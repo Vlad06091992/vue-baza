@@ -5,6 +5,11 @@
     >
       Todo
     </router-link>
+    |
+    <router-link to="/Lesson_3/hw3"
+    >
+      hw3
+    </router-link>
 
   </nav>
   <router-view />

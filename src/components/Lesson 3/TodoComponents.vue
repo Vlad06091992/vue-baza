@@ -3,10 +3,7 @@
     <div class="sample">
       <div class="Todo">
         <h1>Your actions</h1>
-        <div class="action" v-for="(action, i) in todoList">
-          <TodoItem :todo-item="action" :make-step="makeStep" :key="i"></TodoItem>
-
-        </div>
+        <TodoItem v-for="(item, index) in todoList" :todo-item="item" :make-step="makeStep" :key="index"/>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div class="alert" :class="getActionClass">
     <h2>{{ todoItem.title }}</h2>
     <div class="progress">
-      <div :style="{width: (todoItem.current / todoItem.max * 100) + '%'}"
+      <div :style="progressStyle"
            class="progress-bar"
       >
       </div>
@@ -36,7 +36,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const todoItem = ref(props.todoItem).value;
+    const { todoItem } = props;
     const getActionClass = computed(() => {
       let val = todoItem.current / todoItem.max;
 
@@ -46,11 +46,19 @@ export default defineComponent({
         "alert-success": val >= 0.75
       };
     });
-    return { props, getActionClass, todoItem };
+
+    const progressStyle = computed(() => {
+      return { width: (todoItem.current / todoItem.max * 100) + "%" };
+    });
+
+    return { props, getActionClass, todoItem, progressStyle };
   }
 });
 </script>
 
 <style lang="css" scoped>
-
+.wrapper{
+  padding: 15px;
+  max-width: 900px;
+}
 </style>
