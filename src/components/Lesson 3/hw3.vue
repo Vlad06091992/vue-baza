@@ -14,14 +14,14 @@
           Send Data
         </button>
       </form>
-      <pre>
-				{{ info }}
-			</pre>
+<!--      <pre>-->
+<!--				{{ info }}-->
+<!--			</pre>-->
       <div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" v-for="field in info">
           <tr>
-            <td></td>
-            <td></td>
+            <td>{{ field.label}}</td>
+            <td>{{ field.value}}</td>
           </tr>
         </table>
       </div>
@@ -52,6 +52,9 @@ export default defineComponent({
   props: {},
   components: { Input },
   setup(props, ctx) {
+
+    
+
 
     const info: DataType[] = ref([
       {
@@ -120,5 +123,6 @@ export default defineComponent({
 
 <style scoped lang="css">
 
+td{}
 
 </style>
