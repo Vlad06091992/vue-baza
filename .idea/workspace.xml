@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 3/InputWithEmits.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 3/ParentComponentForInput.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Lesson_3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/Lesson_3.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +108,8 @@
       <workItem from="1693245208195" duration="584000" />
       <workItem from="1693328620104" duration="7361000" />
       <workItem from="1693584242465" duration="4964000" />
-      <workItem from="1693674890148" duration="4269000" />
+      <workItem from="1693674890148" duration="4910000" />
+      <workItem from="1693716837415" duration="4775000" />
     </task>
     <servers />
   </component>

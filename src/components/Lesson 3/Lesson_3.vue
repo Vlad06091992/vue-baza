@@ -10,6 +10,11 @@
     >
       hw3
     </router-link>
+    |
+    <router-link to="/Lesson_3/ParentComponentForInput"
+    >
+      ParentComponentForInput
+    </router-link>
 
   </nav>
   <router-view />

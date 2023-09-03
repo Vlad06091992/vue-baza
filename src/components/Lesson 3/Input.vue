@@ -32,10 +32,6 @@ export default defineComponent({
       required: true
     },
   },
-  emits:{
-oninput:null
-  },
-
 
   components: {},
   setup(props, ctx) {

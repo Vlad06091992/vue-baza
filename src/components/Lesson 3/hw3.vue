@@ -10,6 +10,10 @@
         <div>
           <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
         </div>
+
+     <form/>
+
+
         <button class="btn btn-primary" @click="created" :disabled="isNotDisable">
           Send Data
         </button>
@@ -23,7 +27,9 @@
             <td>{{ field.label}}</td>
             <td>{{ field.value}}</td>
           </tr>
+
         </table>
+
       </div>
     </div>
   </div>
@@ -35,6 +41,7 @@
 <script lang="ts">
 import { computed, defineComponent, nextTick, onUpdated, reactive, ref } from "vue";
 import Input from "@/components/Lesson 3/Input.vue";
+import FormInput from "@/components/Lesson 3/InputWithEmits.vue";
 import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
@@ -50,10 +57,10 @@ export type DataType = {
 export default defineComponent({
   name: "hw3",
   props: {},
-  components: { Input },
+  components: { FormInput, Input },
   setup(props, ctx) {
 
-    
+
 
 
     const info: DataType[] = ref([
@@ -85,6 +92,8 @@ export default defineComponent({
     ]).value;
 
 
+
+
     const onInput = (field: DataType, value: string) => {
       field.value = value.trim();
       field.activated = true;
@@ -114,7 +123,7 @@ export default defineComponent({
     };
 
 
-    return { info, onInput, created, progressStyle,isNotDisable };
+    return { info, onInput, created, progressStyle,isNotDisable};
   }
 })
 ;
