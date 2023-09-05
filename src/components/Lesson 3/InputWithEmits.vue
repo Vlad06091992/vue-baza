@@ -1,12 +1,18 @@
-
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits, defineComponent } from "vue";
 import Input from "@/components/Lesson 3/Input.vue";
 
-const { name, type, modelValue } = defineProps(["name", "type", "modelValue"]);
+type Props = {
+  name: string,
+  type: string,
+  modelValue: any
+}
+
+const { name, type, modelValue } = defineProps<Props>();
 const emit = defineEmits(["update:modelValue"]);
 
-const onInput = (event:any) => {
+
+const onInput = (event: any) => {
   emit("update:modelValue", event.target.value);
 };
 </script>
@@ -26,7 +32,7 @@ const onInput = (event:any) => {
 </template>
 
 <style module>
-input{
+input {
   padding: 10px;
   width: 80%;
 }
