@@ -14,10 +14,11 @@
 
 <script lang="ts">
 import { computed, defineComponent, nextTick, onUpdated, reactive, ref } from "vue";
-import { DataType } from "@/components/Lesson 3/hw3.vue";
+
 import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
+import { DataType } from "@/components/Lesson 3/types";
 
 export default defineComponent({
   name: "Input",

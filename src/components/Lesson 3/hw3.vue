@@ -1,17 +1,51 @@
+//TODO 01.31.00
+
+<template>
+  <div class="wrapper">
+    <div class="sample">
+      <form>
+        <div class="progress">
+          <div class="progress-bar" :style="progressStyle"></div>
+        </div>
+        <div>
+          <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
+        </div>
+
+        <form />
+
+
+        <button class="btn btn-primary" @click="created" :disabled="isNotDisable">
+          Send Data
+        </button>
+      </form>
+      <!--      <pre>-->
+      <!--				{{ info }}-->
+      <!--			</pre>-->
+      <div>
+        <table class="table table-bordered" v-for="field in info">
+          <tr>
+            <td>{{ field.label }}</td>
+            <td>{{ field.value }}</td>
+          </tr>
+
+        </table>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+//TODO 01.35.00
+
+
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import Input from "@/components/Lesson 3/Input.vue";
 import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
+import { DataType } from "@/components/Lesson 3/types";
 
-export type DataType = {
-  label: string,
-  value: string,
-  pattern: RegExp
-  activated?: boolean
-  valid?: boolean
-}
 const info: DataType[] = ref([
   {
     label: "Name",
