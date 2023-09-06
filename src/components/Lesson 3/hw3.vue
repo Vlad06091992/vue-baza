@@ -4,9 +4,7 @@
   <div class="wrapper">
     <div class="sample">
       <form>
-        <div class="progress">
-          <div class="progress-bar" :style="progressStyle"></div>
-        </div>
+        <ProgressBar :progress-value="progressValue" />
         <div>
           <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
         </div>
@@ -45,6 +43,7 @@ import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
 import { DataType } from "@/components/Lesson 3/types";
+import ProgressBar from "@/components/Lesson 3/ProgressBar.vue";
 
 const info: DataType[] = ref([
   {
@@ -74,29 +73,30 @@ const info: DataType[] = ref([
   }
 ]).value;
 
+let progressValue = ref(0);
 
 const onInput = (field: DataType, value: string) => {
   field.value = value.trim();
   field.activated = true;
   field.valid = field.pattern.test(field.value);
-};
 
-const progressStyle = computed(() => {
-  let step = info.reduce((acc: number, el: DataType) => {
+  progressValue.value = info.reduce((acc: number, el: DataType) => {
     if (el.valid) {
       acc++;
     }
     return acc;
   }, 0);
-  return { width: `${step * 20}%` };
-});
+
+
+};
+
 
 const isNotDisable = computed(() => {
   return info.some(el => !el.valid);
 });
 
 const created = () => {
-  debugger
+
   info.forEach((field: DataType) => {
     field.valid = false;
     field.activated = false;

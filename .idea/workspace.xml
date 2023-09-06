@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lesson 3/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 3/ProgressBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1693584242465" duration="4964000" />
       <workItem from="1693674890148" duration="4910000" />
       <workItem from="1693716837415" duration="5458000" />
-      <workItem from="1693933131244" duration="4850000" />
+      <workItem from="1693933131244" duration="8815000" />
     </task>
     <servers />
   </component>
