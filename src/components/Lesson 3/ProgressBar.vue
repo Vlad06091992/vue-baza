@@ -4,7 +4,6 @@
   </div>
 </template>
 <script setup lang="ts">
-
 type Props = {
   progressValue: number
 
@@ -14,6 +13,8 @@ import { defineEmits, defineProps } from "vue/dist/vue";
 import { computed, watch } from "vue";
 
 const props = defineProps<Props>();
+// let {progressValue} = defineProps<Props>();
+console.log(props)
 
 
 const progressStyle = computed(() => {
