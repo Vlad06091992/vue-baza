@@ -14,10 +14,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faDeleteLeft, faUserSecret } from "@fortawesome/free-solid-svg-icons";
+
+import { faCircleCheck,faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
+import {  } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
+// <font-awesome-icon icon="fa-solid fa-circle-check" style="color: #32c843;" />
+//   <font-awesome-icon icon="fa-solid fa-circle-exclamation" style="color: #f50000;" />
 library.add(faUserSecret)
 library.add(faDeleteLeft)
+library.add(faCircleCheck)
+library.add(faCircleExclamation)
 createApp(App).use(store).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

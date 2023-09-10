@@ -7,7 +7,8 @@
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1693716837415" duration="5458000" />
       <workItem from="1693933131244" duration="9649000" />
       <workItem from="1694103180276" duration="752000" />
-      <workItem from="1694283578139" duration="1961000" />
+      <workItem from="1694283578139" duration="3306000" />
     </task>
     <servers />
   </component>

@@ -2,10 +2,10 @@
   <div class="form-group">
     <label>
       {{ dataItem.label }}
-      <span v-if="dataItem.activated"
-            :class="dataItem.valid ? 'fa fa-check-circle text-success' : 'fa fa-exclamation-circle text-danger'"
-
-      ></span>
+      <span v-if="dataItem.activated">
+          <font-awesome-icon v-if="dataItem.valid" icon="fa-solid fa-circle-check" style="color: #32c843;" />
+    <font-awesome-icon v-else icon="fa-solid fa-circle-exclamation" style="color: #f50000;" />
+      </span>
     </label>
     <input type="text" class="form-control" :value="dataItem.value" @input="onInput(dataItem,$event.target.value)">
   </div>
@@ -31,14 +31,14 @@ export default defineComponent({
     onInput: {
       type: Function,
       required: true
-    },
+    }
   },
 
   components: {},
   setup(props, ctx) {
     const { onInput, dataItem } = props;
 
-    return { dataItem, onInput};
+    return { dataItem, onInput };
   }
 
 
