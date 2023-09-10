@@ -3,7 +3,7 @@
 <template>
   <div class="wrapper">
     <div class="sample">
-      <form>
+      <form v-show="!sendData">
         <ProgressBar :progress-value="progressValue" />
         <div>
           <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
@@ -20,7 +20,7 @@
       <!--				{{ info }}-->
       <!--			</pre>-->
       <div>
-        <table class="table table-bordered" v-for="field in info">
+        <table v-show="sendData" class="table table-bordered" v-for="field in info">
           <tr>
             <td>{{ field.label }}</td>
             <td>{{ field.value }}</td>
@@ -74,6 +74,7 @@ const info: DataType[] = ref([
 ]).value;
 
 let progressValue = ref(0);
+let sendData = ref(false);
 
 const onInput = (field: DataType, value: string) => {
   field.value = value.trim();
@@ -96,7 +97,7 @@ const isNotDisable = computed(() => {
 });
 
 const created = () => {
-
+  sendData.value = true;
   info.forEach((field: DataType) => {
     field.valid = false;
     field.activated = false;
