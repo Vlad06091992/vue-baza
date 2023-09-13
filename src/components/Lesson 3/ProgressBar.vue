@@ -4,8 +4,9 @@
   </div>
 </template>
 <script setup lang="ts">
+
 type Props = {
-  progressValue: number
+  percentsOfValue: number
 
 }
 
@@ -13,13 +14,8 @@ import { defineEmits, defineProps } from "vue/dist/vue";
 import { computed, watch } from "vue";
 
 const props = defineProps<Props>();
-// let {progressValue} = defineProps<Props>();
-console.log(props)
-
-
 const progressStyle = computed(() => {
-
-    return { width: `${props.progressValue * 20}%` };
+    return { width: `${props.percentsOfValue }%` };
   })
 ;
 

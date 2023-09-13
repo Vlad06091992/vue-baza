@@ -5,12 +5,15 @@
           type="email"
           @input="onInput"
         />
+  <MdiSvg>{{ mdiWechat}}</MdiSvg>
+
   <p>email Value : {{email}}</p>
 
 </template>
 <script setup lang="ts">
 import {ref} from 'vue'
 import FormInput from "@/components/Lesson 3/InputWithEmits.vue";
+import { mdiWechat } from "@mdi/js";
 
 const email = ref('')
 

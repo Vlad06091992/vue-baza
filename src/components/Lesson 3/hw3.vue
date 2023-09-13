@@ -3,8 +3,8 @@
 <template>
   <div class="wrapper">
     <div class="sample">
-      <form v-show="!sendData">
-        <ProgressBar :progress-value="progressValue" />
+      <form>
+        <ProgressBar :percents-of-value="percentsOfValue" />
         <div>
           <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
         </div>
@@ -73,7 +73,7 @@ const info: DataType[] = ref([
   }
 ]).value;
 
-let progressValue = ref(0);
+let percentsOfValue = ref(0);
 let sendData = ref(false);
 
 const onInput = (field: DataType, value: string) => {
@@ -81,12 +81,12 @@ const onInput = (field: DataType, value: string) => {
   field.activated = true;
   field.valid = field.pattern.test(field.value);
 
-  progressValue.value = info.reduce((acc: number, el: DataType) => {
+  percentsOfValue.value = info.reduce((acc: number, el: DataType) => {
     if (el.valid) {
       acc++;
     }
-    return acc;
-  }, 0);
+    return (acc) ;
+  }, 0) * 20 ;
 
 
 };
@@ -100,6 +100,8 @@ const created = () => {
   sendData.value = true;
   info.forEach((field: DataType) => {
     field.valid = false;
+
+
     field.activated = false;
   });
 };
