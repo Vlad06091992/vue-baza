@@ -22,6 +22,3 @@ const progressStyle = computed(() => {
 
 </script>
 
-<style module>
-
-</style>

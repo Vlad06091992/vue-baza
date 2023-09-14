@@ -15,6 +15,11 @@
     >
       ParentComponentForInput
     </router-link>
+    |
+    <router-link to="/Lesson_3/slot"
+    >
+      slot
+    </router-link>
 
   </nav>
   <router-view />
