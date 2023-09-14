@@ -5,7 +5,10 @@
   <app-alert title="Hello, user" content="Welcome to site" color="success" >
     <p>{{total}}</p>
     <p>{{items}}</p>
-  </app-alert>>
+    <template v-slot:ok>
+      <p>success</p>
+    </template>
+  </app-alert>
   <app-alert title="Hello, user" content="Welcome to site" color="danger" />
 </template>
 

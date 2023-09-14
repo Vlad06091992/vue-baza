@@ -4,6 +4,9 @@
   <hr/>
   <p>{{ props.content}}</p>
     <slot></slot>
+    <slot name="ok">
+      <button class="btn-light" type="button" @click="$emit('ok')"> ok</button>
+    </slot>
 </div>
 </template>
 
