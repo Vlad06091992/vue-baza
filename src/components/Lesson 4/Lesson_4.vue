@@ -6,6 +6,16 @@
       transition
     </router-link>
     |
+    <router-link to="/Lesson_4/animation"
+    >
+      animation
+    </router-link>
+    |
+    <router-link to="/Lesson_4/classnames"
+    >
+      classnames
+    </router-link>
+    |
   </nav>
   <router-view />
 </template>

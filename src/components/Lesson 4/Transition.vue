@@ -32,4 +32,6 @@ const showAlert = ref(false)
   transition: opacity 0.5s;
   opacity: 0;
 }
+
+
 </style>

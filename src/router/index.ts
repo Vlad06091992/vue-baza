@@ -16,7 +16,9 @@ import hw3 from "@/components/Lesson 3/hw3.vue";
 import ParentComponentForInput from "@/components/Lesson 3/ParentComponentForInput.vue";
 import Slot from "@/components/Lesson 3/Slot.vue";
 import Lesson_4 from "@/components/Lesson 4/Lesson_4.vue";
-import  Transition  from "@/components/Lesson 4/Transition.vue";
+import Transition from "@/components/Lesson 4/Transition.vue";
+import Animation from "@/components/Lesson 4/Animation.vue";
+import Classnames from "@/components/Lesson 4/Classnames.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -103,7 +105,7 @@ const routes: Array<RouteRecordRaw> = [
         path: "Slot",
         name: "Slot",
         component: Slot
-      },
+      }
 
     ]
   },
@@ -117,6 +119,16 @@ const routes: Array<RouteRecordRaw> = [
         name: "transition",
         component: Transition
       },
+      {
+        path: "animation",
+        name: "animation",
+        component: Animation
+      },
+      {
+        path: "classnames",
+        name: "classnames",
+        component: Classnames
+      }
 
     ]
   }
