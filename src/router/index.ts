@@ -15,6 +15,8 @@ import TodoComponents from "@/components/Lesson 3/TodoComponents.vue";
 import hw3 from "@/components/Lesson 3/hw3.vue";
 import ParentComponentForInput from "@/components/Lesson 3/ParentComponentForInput.vue";
 import Slot from "@/components/Lesson 3/Slot.vue";
+import Lesson_4 from "@/components/Lesson 4/Lesson_4.vue";
+import  Transition  from "@/components/Lesson 4/Transition.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -101,6 +103,19 @@ const routes: Array<RouteRecordRaw> = [
         path: "Slot",
         name: "Slot",
         component: Slot
+      },
+
+    ]
+  },
+  {
+    path: "/Lesson_4",
+    name: "lesson4",
+    component: Lesson_4,
+    children: [
+      {
+        path: "transition",
+        name: "transition",
+        component: Transition
       },
 
     ]

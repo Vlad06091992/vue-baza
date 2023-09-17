@@ -9,6 +9,8 @@
       |
       <router-link to="/Lesson_3">Lesson 3</router-link>
       |
+      <router-link to="/Lesson_4">Lesson 4</router-link>
+      |
       <router-link to="/about">About</router-link>
       |
     </nav>
