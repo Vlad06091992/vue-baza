@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { defineProps, defineEmits, defineComponent } from "vue";
-import Input from "@/components/Lesson 3/Input.vue";
+
 
 type Props = {
   name: string,
   type: string,
+  modelValue: any
 }
 
-const props = defineProps<Props>();
-const emit = defineEmits(["update:modelValue"]);
+const { name, type, modelValue } = defineProps<Props>();
+const emit = defineEmits(["updateValue"]);
 
 
 const onInput = (event: any) => {
-  emit("update:modelValue", event.target.value);
+  emit("updateValue", event.target.value);
 };
 </script>
 
@@ -22,8 +23,9 @@ const onInput = (event: any) => {
     <input
       class="form form-control"
       :type="type"
+      :value="modelValue"
       @input="onInput"
-      :placeholder="props.name"
+      :placeholder="name"
     />
     <br />
   </div>
