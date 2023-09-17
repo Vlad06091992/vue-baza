@@ -16,6 +16,11 @@
       classnames
     </router-link>
     |
+    <router-link to="/Lesson_4/betweenTwoElements"
+    >
+      between two elements
+    </router-link>
+    |
   </nav>
   <router-view />
 </template>

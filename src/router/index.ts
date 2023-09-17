@@ -19,6 +19,7 @@ import Lesson_4 from "@/components/Lesson 4/Lesson_4.vue";
 import Transition from "@/components/Lesson 4/Transition.vue";
 import Animation from "@/components/Lesson 4/Animation.vue";
 import Classnames from "@/components/Lesson 4/Classnames.vue";
+import BetweenTwoElements from "@/components/Lesson 4/Between_two_elements.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -128,6 +129,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "classnames",
         name: "classnames",
         component: Classnames
+      },
+      {
+        path: "betweenTwoElements",
+        name: "betweenTwoElements",
+        component: BetweenTwoElements
       }
 
     ]
