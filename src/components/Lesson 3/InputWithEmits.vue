@@ -5,14 +5,14 @@ import { defineProps, defineEmits, defineComponent } from "vue";
 type Props = {
   name: string,
   type: string,
-  modelValue: any
 }
 
-const { name, type, modelValue } = defineProps<Props>();
+const { name, type } = defineProps<Props>();
 const emit = defineEmits(["updateValue"]);
 
 
 const onInput = (event: any) => {
+  console.log(event.target.value);
   emit("updateValue", event.target.value);
 };
 </script>
@@ -23,7 +23,6 @@ const onInput = (event: any) => {
     <input
       class="form form-control"
       :type="type"
-      :value="modelValue"
       @input="onInput"
       :placeholder="name"
     />

@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lesson 4/Group.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Lesson_4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 4/Lesson_4.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/InputWithEmits.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/InputWithEmits.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/ParentComponentForInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3/ParentComponentForInput.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <workItem from="1694711677979" duration="11126000" />
       <workItem from="1694771196135" duration="11000" />
       <workItem from="1694969798826" duration="6754000" />
-      <workItem from="1695057029288" duration="2764000" />
+      <workItem from="1695057029288" duration="3630000" />
     </task>
     <servers />
   </component>
