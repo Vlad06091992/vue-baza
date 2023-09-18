@@ -21,6 +21,11 @@
       between two elements
     </router-link>
     |
+    <router-link to="/Lesson_4/group"
+    >
+      group
+    </router-link>
+    |
   </nav>
   <router-view />
 </template>

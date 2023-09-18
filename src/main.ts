@@ -26,4 +26,6 @@ library.add(faUserSecret)
 library.add(faDeleteLeft)
 library.add(faCircleCheck)
 library.add(faCircleExclamation)
-createApp(App).use(store).use(router).component('font-awesome-icon', FontAwesomeIcon).use(MdiSvg).mount('#app');
+createApp(App).use(store).use(router).component('font-awesome-icon', FontAwesomeIcon)
+  .use(MdiSvg)
+  .mount('#app');
