@@ -8,27 +8,31 @@
         <div>
           <Input v-for="(field,i) in info" :key="i" :data-item="field" :onInput="onInput" />
         </div>
-
         <form />
-
-
         <button class="btn btn-primary" @click="created" :disabled="isNotDisable">
           Send Data
         </button>
       </form>
-      <!--      <pre>-->
-      <!--				{{ info }}-->
-      <!--			</pre>-->
-      <div>
-        <table v-show="sendData" class="table table-bordered" v-for="field in info">
-          <tr>
-            <td>{{ field.label }}</td>
-            <td>{{ field.value }}</td>
-          </tr>
-
-        </table>
-
+      <div v-show="sendData">
+        <Table :info="info" />
       </div>
+      <el-dialog
+        v-model="dialogVisible"
+        title="Tips"
+        width="30%"
+        :before-close="handleClose"
+      >
+        <Table :info="info"/>
+
+      <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="dialogVisible = false">
+          Confirm
+        </el-button>
+      </span>
+      </template>
+      </el-dialog>
     </div>
   </div>
 </template>
@@ -44,6 +48,8 @@ import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
 import { DataType } from "@/components/Lesson 3-4/types";
 import ProgressBar from "@/components/Lesson 3-4/ProgressBar.vue";
+import Table from "@/components/Lesson 5/table.vue";
+import { ElMessageBox } from 'element-plus'
 
 const info: DataType[] = ref([
   {
@@ -75,6 +81,7 @@ const info: DataType[] = ref([
 
 let percentsOfValue = ref(0);
 let sendData = ref(false);
+const dialogVisible = ref(false);
 
 const onInput = (field: DataType, value: string) => {
   field.value = value.trim();
@@ -85,11 +92,21 @@ const onInput = (field: DataType, value: string) => {
     if (el.valid) {
       acc++;
     }
-    return (acc) ;
-  }, 0) * 20 ;
+    return (acc);
+  }, 0) * 20;
 
 
 };
+
+const handleClose = (done: () => void) => {
+  ElMessageBox.confirm('Are you sure to close this dialog?')
+    .then(() => {
+      done()
+    })
+    .catch(() => {
+      // catch error
+    })
+}
 
 
 const isNotDisable = computed(() => {
@@ -97,6 +114,7 @@ const isNotDisable = computed(() => {
 });
 
 const created = () => {
+  dialogVisible.value = true;
   sendData.value = true;
   info.forEach((field: DataType) => {
     field.valid = false;

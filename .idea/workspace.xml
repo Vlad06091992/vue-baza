@@ -6,27 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Lesson 5/hw5.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Lesson 5/table.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/Input.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/InputWithEmits.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/InputWithEmits.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Lesson_3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/Lesson_3_4.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/ParentComponentForInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/ParentComponentForInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/ProgressBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/ProgressBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/Slot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/Slot.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/TodoComponents.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/TodoComponents.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/TodoItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/TodoItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/app-alert.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/app-alert.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/hw3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/hw3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Animation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Animation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Between_two_elements.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Between_two_elements.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Classnames.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Classnames.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Group.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Lesson_4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Lesson_5.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 4/Transition.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Transition.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3-4/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/Input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 5/Between_two_elements.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/Between_two_elements.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Lesson 5/hw5.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 5/hw5.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +119,7 @@
       <workItem from="1694771196135" duration="11000" />
       <workItem from="1694969798826" duration="6754000" />
       <workItem from="1695057029288" duration="4417000" />
-      <workItem from="1695315428845" duration="624000" />
+      <workItem from="1695315428845" duration="6190000" />
     </task>
     <servers />
   </component>
