@@ -7,9 +7,9 @@
       |
       <router-link to="/Lesson_2">Lesson 2</router-link>
       |
-      <router-link to="/Lesson_3">Lesson 3</router-link>
+      <router-link to="/Lesson_3">Lesson 3-4</router-link>
       |
-      <router-link to="/Lesson_4">Lesson 4</router-link>
+      <router-link to="/Lesson_5">Lesson 5</router-link>
       |
       <router-link to="/about">About</router-link>
       |

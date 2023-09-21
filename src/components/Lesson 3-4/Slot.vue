@@ -38,5 +38,5 @@ const handleReset = (data:string) => {
 const total = 5000;
 const items = 3;
 
-import AppAlert from "@/components/Lesson 3/app-alert.vue";
+import AppAlert from "@/components/Lesson 3-4/app-alert.vue";
 </script>

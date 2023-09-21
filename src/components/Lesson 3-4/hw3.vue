@@ -38,12 +38,12 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import Input from "@/components/Lesson 3/Input.vue";
+import Input from "@/components/Lesson 3-4/Input.vue";
 import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
-import { DataType } from "@/components/Lesson 3/types";
-import ProgressBar from "@/components/Lesson 3/ProgressBar.vue";
+import { DataType } from "@/components/Lesson 3-4/types";
+import ProgressBar from "@/components/Lesson 3-4/ProgressBar.vue";
 
 const info: DataType[] = ref([
   {

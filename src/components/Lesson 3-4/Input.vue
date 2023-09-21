@@ -18,7 +18,7 @@ import { computed, defineComponent, nextTick, onUpdated, reactive, ref } from "v
 import "@/styles/styles.css";
 import "@/styles/font-awesome.min.css";
 import "@/styles/bootstrap.min.css";
-import { DataType } from "@/components/Lesson 3/types";
+import { DataType } from "@/components/Lesson 3-4/types";
 
 export default defineComponent({
   name: "Input",

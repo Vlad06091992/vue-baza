@@ -10,17 +10,18 @@ import One from "@/components/Lesson 2/lifecycles.vue";
 import hw1Refs from "@/components/Lesson 2/hw1Refs.vue";
 import ClassesAndForms from "@/components/Lesson 2/ClassesAndForms.vue";
 import hw2scroll from "@/components/Lesson 2/hw2scroll.vue";
-import Lesson_3 from "@/components/Lesson 3/Lesson_3.vue";
-import TodoComponents from "@/components/Lesson 3/TodoComponents.vue";
-import hw3 from "@/components/Lesson 3/hw3.vue";
-import ParentComponentForInput from "@/components/Lesson 3/ParentComponentForInput.vue";
-import Slot from "@/components/Lesson 3/Slot.vue";
-import Lesson_4 from "@/components/Lesson 4/Lesson_4.vue";
-import Transition from "@/components/Lesson 4/Transition.vue";
-import Animation from "@/components/Lesson 4/Animation.vue";
-import Classnames from "@/components/Lesson 4/Classnames.vue";
-import BetweenTwoElements from "@/components/Lesson 4/Between_two_elements.vue";
-import Group from "@/components/Lesson 4/Group.vue";
+import Lesson_3_4 from "@/components/Lesson 3-4/Lesson_3_4.vue";
+import TodoComponents from "@/components/Lesson 3-4/TodoComponents.vue";
+import hw3 from "@/components/Lesson 3-4/hw3.vue";
+import ParentComponentForInput from "@/components/Lesson 3-4/ParentComponentForInput.vue";
+import Slot from "@/components/Lesson 3-4/Slot.vue";
+import Lesson_5 from "@/components/Lesson 5/Lesson_5.vue";
+import Transition from "@/components/Lesson 5/Transition.vue";
+import Animation from "@/components/Lesson 5/Animation.vue";
+import Classnames from "@/components/Lesson 5/Classnames.vue";
+import BetweenTwoElements from "@/components/Lesson 5/Between_two_elements.vue";
+import Group from "@/components/Lesson 5/Group.vue";
+import Hw5 from "@/components/Lesson 5/hw5.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -86,7 +87,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/Lesson_3",
     name: "lesson3",
-    component: Lesson_3,
+    component: Lesson_3_4,
     children: [
       {
         path: "todo-components",
@@ -112,9 +113,9 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path: "/Lesson_4",
-    name: "lesson4",
-    component: Lesson_4,
+    path: "/Lesson_5",
+    name: "lesson5",
+    component: Lesson_5,
     children: [
       {
         path: "transition",
@@ -140,6 +141,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "group",
         name: "group",
         component: Group
+      },
+      {
+        path: "hw5",
+        name: "hw5",
+        component: Hw5
       }
     ]
   }

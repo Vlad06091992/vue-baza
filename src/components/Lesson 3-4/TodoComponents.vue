@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import TodoItem from "@/components/Lesson 3/TodoItem.vue";
+import TodoItem from "@/components/Lesson 3-4/TodoItem.vue";
 
 export type TodoType = {
   title: string, current: number, max: number
