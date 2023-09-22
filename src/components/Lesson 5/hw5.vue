@@ -13,7 +13,7 @@
           Send Data
         </button>
       </form>
-      <div v-show="sendData">
+      <div v-show="tableVisible">
         <Table :info="info" />
       </div>
       <el-dialog
@@ -21,17 +21,17 @@
         title="Tips"
         width="30%"
         :before-close="handleClose"
-      >
-        <Table :info="info"/>
+      >bgbb
+        <Table :info="info" />
 
-      <template #footer>
+        <template #footer>
       <span class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
+        <el-button @click="">Cancel</el-button>
+        <el-button type="primary" @click="tableVisible = true, dialogVisible = false">
           Confirm
         </el-button>
       </span>
-      </template>
+        </template>
       </el-dialog>
     </div>
   </div>
@@ -49,7 +49,7 @@ import "@/styles/bootstrap.min.css";
 import { DataType } from "@/components/Lesson 3-4/types";
 import ProgressBar from "@/components/Lesson 3-4/ProgressBar.vue";
 import Table from "@/components/Lesson 5/table.vue";
-import { ElMessageBox } from 'element-plus'
+import { ElMessageBox } from "element-plus";
 
 const info: DataType[] = ref([
   {
@@ -81,7 +81,8 @@ const info: DataType[] = ref([
 
 let percentsOfValue = ref(0);
 let sendData = ref(false);
-const dialogVisible = ref(false);
+let dialogVisible = ref(false);
+let tableVisible = ref(false);
 
 const onInput = (field: DataType, value: string) => {
   field.value = value.trim();
@@ -98,15 +99,21 @@ const onInput = (field: DataType, value: string) => {
 
 };
 
+const dialogCancelHandler = () => {
+  tableVisible.value = false;
+  dialogVisible.value = false;
+
+};
+
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure to close this dialog?')
+  ElMessageBox.confirm("Are you sure to close this dialog?")
     .then(() => {
-      done()
+      done();
     })
     .catch(() => {
       // catch error
-    })
-}
+    });
+};
 
 
 const isNotDisable = computed(() => {
