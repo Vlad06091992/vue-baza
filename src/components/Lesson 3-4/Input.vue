@@ -3,9 +3,12 @@
     <label>
       {{ dataItem.label }}
       <span v-if="dataItem.activated">
-        <transition  name="fade" mode="out-in"
-                    enter-active-class="animate__animated animate__flipInY"
-                    enter-leave-class="animate__animated animate__flipOutY"
+        <transition
+          appear
+          appear-active-class="icon"
+          name="fade" mode="out-in"
+                     enter-active-class="animate__animated animate__flipInY"
+                     enter-leave-class="animate__animated animate__flipOutY"
         >
 
 
@@ -57,8 +60,13 @@ export default defineComponent({
   text-align: left;
 }
 
-.start{
-  opacity : 0; transition:opacity 1s
+.icon{
+  animation: iconVisible 2s;
+}
+
+@keyframes iconVisible {
+from{opacity: 0;}
+to{opacity: 1;}
 }
 
 </style>
