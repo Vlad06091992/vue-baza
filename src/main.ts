@@ -1,6 +1,7 @@
 import router from "./router";
-import store from "./store";
+import { createPinia } from "pinia";
 
+const pinia = createPinia()
 
 /* Set up using Vue 3 */
 import { createApp } from "vue";
@@ -17,16 +18,12 @@ import { faDeleteLeft, faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import { faCircleCheck, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-import {} from "@fortawesome/free-solid-svg-icons";
 import MdiSvg from "@yeliulee/vue-mdi-svg/v3";
-/* add icons to the library */
-// <font-awesome-icon icon="fa-solid fa-circle-check" style="color: #32c843;" />
-//   <font-awesome-icon icon="fa-solid fa-circle-exclamation" style="color: #f50000;" />
 library.add(faUserSecret);
 library.add(faDeleteLeft);
 library.add(faCircleCheck);
 library.add(faCircleExclamation);
-createApp(App).use(store).use(router).component("font-awesome-icon", FontAwesomeIcon)
+createApp(App).use(pinia).use(router).component("font-awesome-icon", FontAwesomeIcon)
   .use(MdiSvg)
   .use(ElementPlus)
   .mount("#app");

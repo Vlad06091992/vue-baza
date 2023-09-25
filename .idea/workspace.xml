@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pinia-train/root/pinia-example.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/movieStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 3-4/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 3-4/Input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +121,8 @@
       <workItem from="1694969798826" duration="6754000" />
       <workItem from="1695057029288" duration="4417000" />
       <workItem from="1695315428845" duration="6949000" />
-      <workItem from="1695401638479" duration="4441000" />
+      <workItem from="1695401638479" duration="5986000" />
+      <workItem from="1695660530016" duration="2781000" />
     </task>
     <servers />
   </component>

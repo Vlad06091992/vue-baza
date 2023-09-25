@@ -22,6 +22,7 @@ import Classnames from "@/components/Lesson 5/Classnames.vue";
 import BetweenTwoElements from "@/components/Lesson 5/Between_two_elements.vue";
 import Group from "@/components/Lesson 5/Group.vue";
 import Hw5 from "@/components/Lesson 5/hw5.vue";
+import PiniaExample from "@/components/pinia-train/root/pinia-example.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -146,8 +147,14 @@ const routes: Array<RouteRecordRaw> = [
         path: "hw5",
         name: "hw5",
         component: Hw5
-      }
+      },
+
     ]
+  },
+  {
+    path: "/pinia-example",
+    name: "pinia-example",
+    component: PiniaExample
   }
 ];
 

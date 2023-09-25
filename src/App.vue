@@ -13,6 +13,10 @@
       |
       <router-link to="/about">About</router-link>
       |
+      <router-link to="/pinia-example">pinia-example</router-link>
+      |
+
+
     </nav>
   </div>
   <router-view />
