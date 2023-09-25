@@ -1,35 +1,33 @@
 <template>
   <main>
-  <div>{{movieStore.movies}}</div>
+    <header class="header">
+      <img src="/src/assets/logo.svg" alt="logo" class="header-logo" />
+      <h2>My Favorite Movies</h2>
+    </header>
+    <div class="tabs">
+      <button :class="['btn', { btn_green: movieStore.activeTab === 1 }]">
+        Favorite
+      </button>
+      <button :class="['btn', { btn_green: movieStore.activeTab === 2 }]">
+        Search
+      </button>
+    </div>
+    <div class="movies" v-if="movieStore.activeTab === 1">
+      <h3>All Movies</h3>
+      <Movie v-for="movie of movieStore.movies"
+             :movie="movie"
+      />
 
-<!--    <header class="header">-->
-<!--      <img src="/src/assets/logo.svg" alt="logo" class="header-logo" />-->
-<!--      <h2>My Favorite Movies</h2>-->
-<!--    </header>-->
-<!--    <div class="tabs">-->
-<!--      <button :class="['btn', { btn_green: movieStore.activeTab === 1 }]">-->
-<!--        Favorite-->
-<!--      </button>-->
-<!--      <button :class="['btn', { btn_green: movieStore.activeTab === 2 }]">-->
-<!--        Search-->
-<!--      </button>-->
-<!--    </div>-->
-<!--    <div class="movies" v-if="movieStore.activeTab === 1">-->
-<!--      <h3>All Movies</h3>-->
-<!--      <Movie-->
-<!--        v-for="movie of movieStore.movies"-->
-<!--        :key="movie.id"-->
-<!--        :movie="movie" />-->
-<!--    </div>-->
-<!--    <div class="search" v-else>Search</div>-->
+    </div>
+    <div class="search" v-else>Search</div>
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useMovieStore } from "@/stores/movieStore";
+import Movie from "../components/Movie.vue";
 
 const movieStore = useMovieStore();
-console.log(movieStore)
 </script>
 
 <style scoped lang="css">
@@ -41,10 +39,12 @@ console.log(movieStore)
   align-items: center;
   padding: 20px;
 }
+
 .header-logo {
   max-width: 50px;
   margin-right: 10px;
 }
+
 .btn {
   border: none;
   width: 100px;
@@ -55,9 +55,11 @@ console.log(movieStore)
   cursor: pointer;
   background: #efefef;
 }
+
 .btn:hover {
   opacity: 0.7;
 }
+
 .btn_green {
   background: #37df5c;
 }
