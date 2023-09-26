@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e19b27-a85f-45a4-9940-dc2cdea640ac" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../.idea/Desktop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pinia-train/components/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson 1/cakeComponent/hw1/hw-1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pinia-train/components/Movie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pinia-train/components/Movie.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pinia-train/root/pinia-example.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pinia-train/root/pinia-example.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/movieStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/movieStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,8 @@
       <workItem from="1695057029288" duration="4417000" />
       <workItem from="1695315428845" duration="6949000" />
       <workItem from="1695401638479" duration="5986000" />
-      <workItem from="1695660530016" duration="5273000" />
+      <workItem from="1695660530016" duration="6141000" />
+      <workItem from="1695747253752" duration="6359000" />
     </task>
     <servers />
   </component>

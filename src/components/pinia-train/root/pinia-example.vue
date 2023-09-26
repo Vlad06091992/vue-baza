@@ -1,7 +1,7 @@
 <template>
   <main>
     <header class="header">
-      <img src="/src/assets/logo.svg" alt="logo" class="header-logo" />
+      <img :src="piniaIcon" alt="logo" class="header-logo" />
       <h2>My Favorite Movies</h2>
     </header>
     <div class="tabs">
@@ -13,6 +13,10 @@
       </button>
     </div>
     <div class="movies" v-if="movieStore.activeTab === 1">
+      <h3>Watched Movies</h3>
+      <Movie v-for="movie of movieStore.watchedMovies"
+             :movie="movie"
+      />
       <h3>All Movies</h3>
       <Movie v-for="movie of movieStore.movies"
              :movie="movie"
@@ -25,7 +29,8 @@
 
 <script setup lang="ts">
 import { useMovieStore } from "@/stores/movieStore";
-import Movie from "../components/Movie.vue";
+import piniaIcon from "@/assets/pinia-seeklogo.com.svg";
+import Movie from "@/components/pinia-train/components/Movie.vue";
 
 const movieStore = useMovieStore();
 </script>

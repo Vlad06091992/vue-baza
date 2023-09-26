@@ -24,7 +24,7 @@
 
 
 
-type Movie = {
+ type Movie = {
   id: number,
   original_title: string,
   overview: string,
@@ -58,6 +58,7 @@ const props = defineProps<Props>();
   margin-right: 10px;
 }
 
+
 .movie-img {
   width: 200px;
   height: 200px;
@@ -75,6 +76,11 @@ const props = defineProps<Props>();
 .movie-overview {
   display: block;
   margin-bottom: 20px;
+}
+
+.btn{
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .movie-buttons {
